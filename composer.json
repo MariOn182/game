@@ -1,0 +1,11 @@
+{
+  "name": "nathanstark/bxb",
+  "description": "БаЗаготовка под новый проект Bitrix",
+  "type": "project",
+  "require-dev": {
+    "codeception/codeception": "^3.1"
+  },
+  "require": {
+    "bitrix-expert/monolog-adapter": "^1.0"
+  }
+}
