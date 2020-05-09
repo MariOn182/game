@@ -1,5 +1,5 @@
 <?php
-namespace Starlabs\Tools;
+namespace Starlabs\Tools\Helpers;
 
 use CharsetConverter;
 
@@ -8,8 +8,8 @@ use CharsetConverter;
  */
 class Utils
 {
-    /**
-     * Склоняет существительное с числительным
+	/**
+	 * Склоняет существительное с числительным
      *
      * @param integer $number Число
      * @param array $cases Варианты существительного в разных падежах и числах (nominativ, genetiv, plural). Пример: array('комментарий', 'комментария', 'комментариев')
