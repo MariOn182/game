@@ -1,4 +1,12 @@
-# Default ignored files
-/.idea
-/.gitignore
-/web/birix
+/web/bitrix/
+/web/upload/
+/front/node_modules/
+/.git/
+/.idea/
+.DS_Store
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw*

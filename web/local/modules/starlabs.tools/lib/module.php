@@ -6,12 +6,13 @@ namespace Starlabs\Tools;
  */
 class Module
 {
-    /**
-     * Обработчик начала отображения страницы
-     *
-     * @return void
-     */
-    public static function onPageStart()
-    {
-    }
+	/**
+	 * Обработчик начала отображения страницы
+	 *
+	 * @return void
+	 */
+	public static function onPageStart()
+	{
+
+	}
 }

@@ -1,25 +1,25 @@
 <?php
 
-use \Bitrix\Main\Loader;
-use \Bitrix\Main\Application;
-use \Starlabs\Tools\Mvc\Controller\Prototype as Mvc;
+use Bitrix\Main\Loader;
+use Starlabs\Tools\Ajax\Router;
+
+define('NO_KEEP_STATISTIC', 'Y');
+define('NO_AGENT_STATISTIC', 'Y');
+define('NO_AGENT_CHECK', true);
+define('PUBLIC_AJAX_MODE', true);
+define('DisableEventsCheck', true);
 
 require_once $_SERVER['DOCUMENT_ROOT'] . '/bitrix/modules/main/include/prolog_before.php';
 
-$request = Application::getInstance()->getContext()->getRequest();
+if (!Loader::includeModule('starlabs.tools')) {
+	die();
+}
 
 try {
-    if (!Loader::includeModule('starlabs.tools')) {
-        throw new Exception('Can\'t include module "starlabs.tools".');
-    }
-
-    $name = htmlspecialchars($request->getQuery("controller"));
-    $action = htmlspecialchars($request->getQuery("action"));
-
-    $controller = Mvc::factory($name);
-    $controller->doAction($action);
+	$Router = new Router();
+	$Router->Action();
 } catch (Exception $e) {
-    print $e->GetMessage();
+	print $e->GetMessage();
 }
 
 require_once $_SERVER['DOCUMENT_ROOT'] . '/bitrix/modules/main/include/epilog_after.php';

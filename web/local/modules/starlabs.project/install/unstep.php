@@ -1,6 +1,6 @@
 <?
 if (!check_bitrix_sessid()) {
-    return;
+	return;
 }
 
 echo CAdminMessage::ShowNote("Модуль starlabs.project успешно удален из системы ");

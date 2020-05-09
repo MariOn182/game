@@ -1,6 +1,6 @@
 {
   "name": "nathanstark/bxb",
-  "description": "БаЗаготовка под новый проект Bitrix",
+  "description": "Заготовка под новый проект Bitrix",
   "type": "project",
   "require-dev": {
     "codeception/codeception": "^3.1"

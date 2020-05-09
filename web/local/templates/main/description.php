@@ -1,7 +1,7 @@
 <?php
 $arTemplate = [
-    'NAME' => 'Шаблон lesollp',
-    'DESCRIPTION' => '',
-    'SORT' => '',
-    'TYPE' => '',
+	'NAME' => 'Шаблон сайта ....',
+	'DESCRIPTION' => '',
+	'SORT' => '',
+	'TYPE' => '',
 ];
