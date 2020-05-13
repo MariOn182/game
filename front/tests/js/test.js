@@ -2,9 +2,8 @@
 
 (function (factory) {
     typeof define === 'function' && define.amd ? define('uikittest', factory) :
-        factory();
-}((function () {
-    'use strict';
+    factory();
+}((function () { 'use strict';
 
     var objPrototype = Object.prototype;
     var hasOwnProperty = objPrototype.hasOwnProperty;
@@ -170,12 +169,8 @@
 
     function removeAttr(element, name) {
         element = toNodes(element);
-        name.split(' ').forEach(function (name) {
-                return element.forEach(function (element) {
-                        return element.hasAttribute(name) && element.removeAttribute(name);
-                    }
-                );
-            }
+        name.split(' ').forEach(function (name) { return element.forEach(function (element) { return element.hasAttribute(name) && element.removeAttribute(name); }
+            ); }
         );
     }
 
@@ -198,7 +193,7 @@
     }
 
     function _query(selector, context, queryFn) {
-        if (context === void 0) context = document;
+        if ( context === void 0 ) context = document;
 
 
         if (!selector || !isString(selector)) {
@@ -240,9 +235,7 @@
 
                 if (!ctx.id) {
                     ctx.id = "uk-" + (Date.now()) + i;
-                    removes.push(function () {
-                        return removeAttr(ctx, 'id');
-                    });
+                    removes.push(function () { return removeAttr(ctx, 'id'); });
                 }
 
                 return ("#" + (escape(ctx.id)) + " " + selector);
@@ -263,9 +256,7 @@
 
         } finally {
 
-            removes && removes.forEach(function (remove) {
-                return remove();
-            });
+            removes && removes.forEach(function (remove) { return remove(); });
 
         }
 
@@ -281,18 +272,14 @@
     var selectorRe = /.*?[^\\](?:,|$)/g;
 
     function splitSelector(selector) {
-        return selector.match(selectorRe).map(function (selector) {
-            return selector.replace(/,$/, '').trim();
-        });
+        return selector.match(selectorRe).map(function (selector) { return selector.replace(/,$/, '').trim(); });
     }
 
     var elProto = Element.prototype;
     var matchesFn = elProto.matches || elProto.webkitMatchesSelector || elProto.msMatchesSelector;
 
     function matches(element, selector) {
-        return toNodes(element).some(function (element) {
-            return matchesFn.call(element, selector);
-        });
+        return toNodes(element).some(function (element) { return matchesFn.call(element, selector); });
     }
 
     var closestFn = elProto.closest || function (selector) {
@@ -317,15 +304,11 @@
 
         return isNode(element)
             ? closestFn.call(element, selector)
-            : toNodes(element).map(function (element) {
-                return closest(element, selector);
-            }).filter(Boolean);
+            : toNodes(element).map(function (element) { return closest(element, selector); }).filter(Boolean);
     }
 
     var escapeFn = window.CSS && CSS.escape || function (css) {
-        return css.replace(/([^\x7f-\uFFFF\w-])/g, function (match) {
-            return ("\\" + match);
-        });
+        return css.replace(/([^\x7f-\uFFFF\w-])/g, function (match) { return ("\\" + match); });
     };
 
     function escape(css) {
@@ -342,7 +325,7 @@
 
     function on() {
         var args = [], len = arguments.length;
-        while (len--) args[len] = arguments[len];
+        while ( len-- ) args[ len ] = arguments[ len ];
 
 
         var ref = getArgs(args);
@@ -368,29 +351,19 @@
 
         useCapture = useCaptureFilter(useCapture);
 
-        type.split(' ').forEach(function (type) {
-                return targets.forEach(function (target) {
-                        return target.addEventListener(type, listener, useCapture);
-                    }
-                );
-            }
+        type.split(' ').forEach(function (type) { return targets.forEach(function (target) { return target.addEventListener(type, listener, useCapture); }
+            ); }
         );
-        return function () {
-            return off(targets, type, listener, useCapture);
-        };
+        return function () { return off(targets, type, listener, useCapture); };
     }
 
     function off(targets, type, listener, useCapture) {
-        if (useCapture === void 0) useCapture = false;
+        if ( useCapture === void 0 ) useCapture = false;
 
         useCapture = useCaptureFilter(useCapture);
         targets = toEventTargets(targets);
-        type.split(' ').forEach(function (type) {
-                return targets.forEach(function (target) {
-                        return target.removeEventListener(type, listener, useCapture);
-                    }
-                );
-            }
+        type.split(' ').forEach(function (type) { return targets.forEach(function (target) { return target.removeEventListener(type, listener, useCapture); }
+            ); }
         );
     }
 
@@ -409,9 +382,7 @@
             delegates.forEach(function (delegate) {
 
                 var current = selector[0] === '>'
-                    ? findAll(selector, delegate).reverse().filter(function (element) {
-                        return within(e.target, element);
-                    })[0]
+                    ? findAll(selector, delegate).reverse().filter(function (element) { return within(e.target, element); })[0]
                     : closest(e.target, selector);
 
                 if (current) {
@@ -427,9 +398,7 @@
     }
 
     function detail(listener) {
-        return function (e) {
-            return isArray(e.detail) ? listener.apply(void 0, [e].concat(e.detail)) : listener(e);
-        };
+        return function (e) { return isArray(e.detail) ? listener.apply(void 0, [e].concat(e.detail)) : listener(e); };
     }
 
     function selfFilter(listener) {
@@ -471,17 +440,13 @@
         if (!parent.hasChildNodes()) {
             return append(parent, element);
         } else {
-            return insertNodes(element, function (element) {
-                return parent.insertBefore(element, parent.firstChild);
-            });
+            return insertNodes(element, function (element) { return parent.insertBefore(element, parent.firstChild); });
         }
     }
 
     function append(parent, element) {
         parent = $(parent);
-        return insertNodes(element, function (element) {
-            return parent.appendChild(element);
-        });
+        return insertNodes(element, function (element) { return parent.appendChild(element); });
     }
 
     function insertNodes(element, fn) {
@@ -528,14 +493,14 @@
 
     function addClass(element) {
         var args = [], len = arguments.length - 1;
-        while (len-- > 0) args[len] = arguments[len + 1];
+        while ( len-- > 0 ) args[ len ] = arguments[ len + 1 ];
 
         apply(element, args, 'add');
     }
 
     function removeClass(element) {
         var args = [], len = arguments.length - 1;
-        while (len-- > 0) args[len] = arguments[len + 1];
+        while ( len-- > 0 ) args[ len ] = arguments[ len + 1 ];
 
         apply(element, args, 'remove');
     }
@@ -548,16 +513,12 @@
 
             supports.Multiple
                 ? classList[fn].apply(classList, args)
-                : args.forEach(function (cls) {
-                    return classList[fn](cls);
-                });
+                : args.forEach(function (cls) { return classList[fn](cls); });
         });
     }
 
     function getArgs$1(args) {
-        return args.reduce(function (args, arg) {
-                return args.concat.call(args, isString(arg) && includes(arg, ' ') ? arg.trim().split(' ') : arg);
-            }
+        return args.reduce(function (args, arg) { return args.concat.call(args, isString(arg) && includes(arg, ' ') ? arg.trim().split(' ') : arg); }
             , []);
     }
 
@@ -572,7 +533,7 @@
             return this.get('_force');
         },
 
-        get: function (key) {
+        get: function(key) {
 
             if (!hasOwn(this, key)) {
                 var ref = document.createElement('_');
@@ -632,9 +593,7 @@
                 }, {});
 
             } else if (isObject(property)) {
-                each(property, function (value, property) {
-                    return css(element, property, value);
-                });
+                each(property, function (value, property) { return css(element, property, value); });
             }
 
             return element;
@@ -886,19 +845,19 @@
         reads: [],
         writes: [],
 
-        read: function (task) {
+        read: function(task) {
             this.reads.push(task);
             scheduleFlush();
             return task;
         },
 
-        write: function (task) {
+        write: function(task) {
             this.writes.push(task);
             scheduleFlush();
             return task;
         },
 
-        clear: function (task) {
+        clear: function(task) {
             return remove(this.reads, task) || remove(this.writes, task);
         },
 
@@ -907,7 +866,7 @@
     };
 
     function flush(recursion) {
-        if (recursion === void 0) recursion = 1;
+        if ( recursion === void 0 ) recursion = 1;
 
         runTasks(fastdom.reads);
         runTasks(fastdom.writes.splice(0, fastdom.writes.length));
@@ -927,13 +886,9 @@
             if (recursion > RECURSION_LIMIT) {
                 throw new Error('Maximum recursion limit reached.');
             } else if (recursion) {
-                Promise.resolve().then(function () {
-                    return flush(recursion);
-                });
+                Promise.resolve().then(function () { return flush(recursion); });
             } else {
-                requestAnimationFrame(function () {
-                    return flush();
-                });
+                requestAnimationFrame(function () { return flush(); });
             }
         }
     }
@@ -1000,178 +955,168 @@
     document.writeln('<script src="../dist/js/uikit.js"></script>');
     document.writeln(("<script src=\"" + (style.icons ? style.icons : '../dist/js/uikit-icons.min.js') + "\"></script>"));
 
-    on(window, 'load', function () {
-        return setTimeout(function () {
-            return fastdom.write(function () {
+    on(window, 'load', function () { return setTimeout(function () { return fastdom.write(function () {
 
-                var $body = document.body;
-                var $container = prepend($body, (" <div class=\"uk-container\" style=\"display: none\"> <select class=\"uk-select uk-form-width-small\" style=\"margin: 20px 20px 20px 0\"> <option value=\"index.html\">Overview</option> " + ([
-                    'accordion',
-                    'alert',
-                    'align',
-                    'animation',
-                    'article',
-                    'background',
-                    'badge',
-                    'base',
-                    'breadcrumb',
-                    'button',
-                    'card',
-                    'close',
-                    'column',
-                    'comment',
-                    'container',
-                    'countdown',
-                    'cover',
-                    'description-list',
-                    'divider',
-                    'dotnav',
-                    'drop',
-                    'dropdown',
-                    'filter',
-                    'flex',
-                    'form',
-                    'grid',
-                    'grid-masonry',
-                    'grid-parallax',
-                    'heading',
-                    'height',
-                    'height-expand',
-                    'height-viewport',
-                    'icon',
-                    'iconnav',
-                    'image',
-                    'label',
-                    'leader',
-                    'lightbox',
-                    'link',
-                    'list',
-                    'margin',
-                    'marker',
-                    'modal',
-                    'nav',
-                    'navbar',
-                    'notification',
-                    'offcanvas',
-                    'overlay',
-                    'padding',
-                    'pagination',
-                    'parallax',
-                    'position',
-                    'placeholder',
-                    'progress',
-                    'scroll',
-                    'scrollspy',
-                    'search',
-                    'section',
-                    'slidenav',
-                    'slider',
-                    'slideshow',
-                    'sortable',
-                    'spinner',
-                    'sticky',
-                    'sticky-navbar',
-                    'subnav',
-                    'svg',
-                    'switcher',
-                    'tab',
-                    'table',
-                    'text',
-                    'thumbnav',
-                    'tile',
-                    'toggle',
-                    'tooltip',
-                    'totop',
-                    'transition',
-                    'utility',
-                    'upload',
-                    'video',
-                    'visibility',
-                    'width'
-                ].sort().map(function (name) {
-                    return ("<option value=\"" + name + ".html\">" + (name.split('-').map(ucfirst).join(' ')) + "</option>");
-                }).join('')) + " </select> <select class=\"uk-select uk-form-width-small\" style=\"margin: 20px\"> " + (Object.keys(styles).map(function (style) {
-                    return ("<option value=\"" + style + "\">" + (ucfirst(style)) + "</option>");
-                }).join('')) + " </select> <select class=\"uk-select uk-form-width-small\" style=\"margin: 20px\"> " + (Object.keys(variations).map(function (name) {
-                    return ("<option value=\"" + name + "\">" + (variations[name]) + "</option>");
-                }).join('')) + "         </select> <label style=\"margin: 20px\"> <input type=\"checkbox\" class=\"uk-checkbox\"/> <span style=\"margin: 5px\">RTL</span> </label> </div> "));
+        var $body = document.body;
+        var $container = prepend($body, (" <div class=\"uk-container\" style=\"display: none\"> <select class=\"uk-select uk-form-width-small\" style=\"margin: 20px 20px 20px 0\"> <option value=\"index.html\">Overview</option> " + ([
+            'accordion',
+            'alert',
+            'align',
+            'animation',
+            'article',
+            'background',
+            'badge',
+            'base',
+            'breadcrumb',
+            'button',
+            'card',
+            'close',
+            'column',
+            'comment',
+            'container',
+            'countdown',
+            'cover',
+            'description-list',
+            'divider',
+            'dotnav',
+            'drop',
+            'dropdown',
+            'filter',
+            'flex',
+            'form',
+            'grid',
+            'grid-masonry',
+            'grid-parallax',
+            'heading',
+            'height',
+            'height-expand',
+            'height-viewport',
+            'icon',
+            'iconnav',
+            'image',
+            'label',
+            'leader',
+            'lightbox',
+            'link',
+            'list',
+            'margin',
+            'marker',
+            'modal',
+            'nav',
+            'navbar',
+            'notification',
+            'offcanvas',
+            'overlay',
+            'padding',
+            'pagination',
+            'parallax',
+            'position',
+            'placeholder',
+            'progress',
+            'scroll',
+            'scrollspy',
+            'search',
+            'section',
+            'slidenav',
+            'slider',
+            'slideshow',
+            'sortable',
+            'spinner',
+            'sticky',
+            'sticky-navbar',
+            'subnav',
+            'svg',
+            'switcher',
+            'tab',
+            'table',
+            'text',
+            'thumbnav',
+            'tile',
+            'toggle',
+            'tooltip',
+            'totop',
+            'transition',
+            'utility',
+            'upload',
+            'video',
+            'visibility',
+            'width'
+        ].sort().map(function (name) { return ("<option value=\"" + name + ".html\">" + (name.split('-').map(ucfirst).join(' ')) + "</option>"); }).join('')) + " </select> <select class=\"uk-select uk-form-width-small\" style=\"margin: 20px\"> " + (Object.keys(styles).map(function (style) { return ("<option value=\"" + style + "\">" + (ucfirst(style)) + "</option>"); }).join('')) + " </select> <select class=\"uk-select uk-form-width-small\" style=\"margin: 20px\"> " + (Object.keys(variations).map(function (name) { return ("<option value=\"" + name + "\">" + (variations[name]) + "</option>"); }).join('')) + "         </select> <label style=\"margin: 20px\"> <input type=\"checkbox\" class=\"uk-checkbox\"/> <span style=\"margin: 5px\">RTL</span> </label> </div> "));
 
-                var ref = $container.children;
-                var $tests = ref[0];
-                var $styles = ref[1];
-                var $inverse = ref[2];
-                var $rtl = ref[3];
+        var ref = $container.children;
+        var $tests = ref[0];
+        var $styles = ref[1];
+        var $inverse = ref[2];
+        var $rtl = ref[3];
 
-                // Tests
-                // ------------------------------
+        // Tests
+        // ------------------------------
 
-                on($tests, 'change', function () {
-                    if ($tests.value) {
-                        location.href = "" + ($tests.value) + (styles.custom ? ("?style=" + (getParam('style'))) : '');
-                    }
-                });
-                $tests.value = (component || 'index') + ".html";
+        on($tests, 'change', function () {
+            if ($tests.value) {
+                location.href = "" + ($tests.value) + (styles.custom ? ("?style=" + (getParam('style'))) : '');
+            }
+        });
+        $tests.value = (component || 'index') + ".html";
 
-                // Styles
-                // ------------------------------
+        // Styles
+        // ------------------------------
 
-                on($styles, 'change', function () {
-                    storage[key] = $styles.value;
-                    location.reload();
-                });
-                $styles.value = storage[key];
+        on($styles, 'change', function () {
+            storage[key] = $styles.value;
+            location.reload();
+        });
+        $styles.value = storage[key];
 
-                // Variations
-                // ------------------------------
+        // Variations
+        // ------------------------------
 
-                $inverse.value = storage[keyinverse];
+        $inverse.value = storage[keyinverse];
 
-                if ($inverse.value) {
+        if ($inverse.value) {
 
-                    removeClass(document.querySelectorAll('*'), [
-                        'uk-navbar-container',
-                        'uk-card-default',
-                        'uk-card-muted',
-                        'uk-card-primary',
-                        'uk-card-secondary',
-                        'uk-tile-default',
-                        'uk-tile-muted',
-                        'uk-tile-primary',
-                        'uk-tile-secondary',
-                        'uk-section-default',
-                        'uk-section-muted',
-                        'uk-section-primary',
-                        'uk-section-secondary',
-                        'uk-overlay-default',
-                        'uk-overlay-primary'
-                    ]);
+            removeClass(document.querySelectorAll('*'), [
+                'uk-navbar-container',
+                'uk-card-default',
+                'uk-card-muted',
+                'uk-card-primary',
+                'uk-card-secondary',
+                'uk-tile-default',
+                'uk-tile-muted',
+                'uk-tile-primary',
+                'uk-tile-secondary',
+                'uk-section-default',
+                'uk-section-muted',
+                'uk-section-primary',
+                'uk-section-secondary',
+                'uk-overlay-default',
+                'uk-overlay-primary'
+            ]);
 
-                    css(docEl, 'background', $inverse.value === 'dark' ? '#fff' : '#222');
-                    addClass($body, ("uk-" + ($inverse.value)));
+            css(docEl, 'background', $inverse.value === 'dark' ? '#fff' : '#222');
+            addClass($body, ("uk-" + ($inverse.value)));
 
-                }
+        }
 
-                on($inverse, 'change', function () {
-                    storage[keyinverse] = $inverse.value;
-                    location.reload();
-                });
+        on($inverse, 'change', function () {
+            storage[keyinverse] = $inverse.value;
+            location.reload();
+        });
 
-                // RTL
-                // ------------------------------
+        // RTL
+        // ------------------------------
 
-                on($rtl, 'change', function (ref) {
-                    var target = ref.target;
+        on($rtl, 'change', function (ref) {
+            var target = ref.target;
 
-                    storage._uikit_dir = target.checked ? 'rtl' : 'ltr';
-                    location.reload();
-                });
-                $rtl.firstElementChild.checked = dir === 'rtl';
+            storage._uikit_dir = target.checked ? 'rtl' : 'ltr';
+            location.reload();
+        });
+        $rtl.firstElementChild.checked = dir === 'rtl';
 
-                css(docEl, 'paddingTop', '');
+        css(docEl, 'paddingTop', '');
 
-            });
-        }, 100);
-    });
+    }); }, 100); });
 
     css(docEl, 'paddingTop', '80px');
 

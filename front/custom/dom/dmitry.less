@@ -63,7 +63,23 @@ body {
 }
 
 .consultation {
-  display: flex;
+
+  &__wrap {
+    display: flex;
+  }
+
+  &__body {
+    padding: 50px 40px 40px;
+    & h2 {
+      font-size: 40px;
+      color: #000;
+      margin-bottom: 15px;
+    }
+    & p {
+      font-size: 24px;
+
+    }
+  }
 
   &__img {
     background: #E0483B;
