@@ -1,0 +1,139 @@
+.content {
+  background: url(../../pages/assets/images/main.png), linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.5) 100%) no-repeat;
+  height: 100vh;
+  background-size: cover;
+  position: relative;
+  background-blend-mode: darken;
+
+  @media (max-width: 700px) {
+    background: #fff;
+  }
+
+  &__wrap {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.5) 100%);
+    opacity: 0.8;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+  }
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  padding: 100px 0 0;
+
+  @media (max-width: 1024px) {
+    padding-top: 85px;
+  }
+
+  @media (max-width: 700px) {
+    flex-direction: column;
+    padding-top: 45px;
+  }
+
+  &-h {
+    color: #fff;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 50px;
+    text-transform: uppercase;
+
+    @media (max-width: 1024px) {
+      font-size: 30px;
+    }
+
+    @media (max-width: 700px) {
+      color: @global-color;
+      margin-bottom: 10px;
+      font-size: 24px;
+      line-height: 35px;
+    }
+  }
+
+  &-form {
+    background: #fff;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 35%;
+    @media (max-width: 700px) {
+      padding: 0;
+    }
+
+    & > input {
+      padding: 13px 13px 13px 0;
+      border: none;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      outline: none;
+      margin-bottom: 35px;
+      width: 270px;
+
+      &::placeholder {
+        color: @dom-grey-text;
+      }
+
+      @media (max-width: 900px) {
+        width: 90%;
+      }
+
+    }
+
+    & > input[type="number"] {
+      margin-bottom: 0
+    }
+
+    & > span {
+      color: @global-color;
+    }
+
+    & > span:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    & > span, & > input {
+      font-size: 18px;
+      @media (max-width: 1024px) {
+        font-size: 16px;
+      }
+    }
+
+  }
+
+  & > form:last-child {
+    display: none;
+  }
+}
+
+.main-form__wrong {
+  font-size: 12px !important;
+  line-height: 20px !important;
+  color: #C73000 !important;
+}
+
+.user-button {
+  background: @dom-red-color;
+  outline: none;
+  border: none;
+  padding: 10px 20px;
+  color: #fff;
+  width: 130px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: 0.8s;
+  cursor: pointer;
+
+  &:hover {
+    background: #fff;
+    color: @dom-red-color;
+    border: 1px solid @dom-red-color;
+  }
+
+  @media (max-width: 700px) {
+    width: 100%;
+  }
+}
