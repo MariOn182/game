@@ -1,1 +1,14 @@
-{"dom":{"css":"../dist/css/uikit.dom.css"}}
+{
+  "mytheme": {
+    "css": "../dist/css/uikit.mytheme.css"
+  },
+  "user": {
+    "css": "../dist/css/uikit.user.css"
+  },
+  "pompeii": {
+    "css": "../dist/css/uikit.pompeii.css"
+  },
+  "dom": {
+    "css": "../dist/css/uikit.dom.css"
+  }
+}
