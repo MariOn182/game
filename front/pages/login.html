@@ -84,23 +84,28 @@
     <section class="content">
 
         <div class="uk-container">
-            <div class="main">
-                <h1 class="main-h">
-                    Вход в личный кабинет
-                </h1>
+            <div class="main uk-child-width-1-2@l">
+                <div>
+                    <h1 class="main-h">
+                        Вход в личный кабинет
+                    </h1>
+                </div>
 
-                <form class="main-form " method="post">
-                    <span>Этот сервис трам-пам-пам, объясняем выгоду скидки, как это работает</span>
-                    <span>Ваш номер телефона</span>
-                    <input type="tel"  pattern="+7 ([0-9]{3})-[0-9]{3}-[0-9]{2}-[0-9]{2}" placeholder="+7 (___) ___-__-__" required>
-                    <button type="submit" class="user-button">Войти</button>
-                </form>
+                <div>
+                    <form class="main-form" method="post">
+                        <span>Этот сервис трам-пам-пам, объясняем выгоду скидки, как это работает</span>
+                        <span>Ваш номер телефона</span>
+                        <input type="tel" placeholder="+7 (___) ___-__-__" required>
+                        <button type="submit" class="user-button">Войти</button>
+                    </form>
 
-                <form class="main-form" method="post">
-                    <span>Мы отправили код подтверждения на номер 8 (999) 999-99-99 </span>
-                    <input type="number"  placeholder="Код подтверждения" required>
-                    <span class="main-form__wrong">Введен неверный код</span>
-                </form>
+                    <form class="main-form" method="post">
+                        <span>Мы отправили код подтверждения на номер 8 (999) 999-99-99 </span>
+                        <input type="number" placeholder="Код подтверждения" required>
+                        <span class="main-form__wrong">Введен неверный код</span>
+                    </form>
+                </div>
+
             </div>
         </div>
 
