@@ -1,9 +1,9 @@
 .content {
-  background: url(../../pages/assets/images/main.png), linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.5) 100%) no-repeat;
+  background: url(../../pages/assets/images/main.png) no-repeat, linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.5) 100%);
   height: 100vh;
-  background-size: cover;
   position: relative;
   background-blend-mode: darken;
+  background-size: cover;
 
   @media (max-width: 700px) {
     background: #fff;
@@ -38,6 +38,7 @@
     font-size: 40px;
     line-height: 50px;
     text-transform: uppercase;
+    letter-spacing: 1px;
 
     @media (max-width: 1024px) {
       font-size: 30px;
@@ -56,10 +57,9 @@
     padding: 30px;
     display: flex;
     flex-direction: column;
-    flex-basis: 35%;
-    @media (max-width: 700px) {
-      padding: 0;
-    }
+    width: fit-content;
+    margin-left: 10px;
+
 
     & > input {
       padding: 13px 13px 13px 0;
@@ -85,6 +85,16 @@
 
     & > span {
       color: @global-color;
+      width: 400px;
+      @media (max-width: 1024px) {
+        width: 330px;
+      }
+      @media (max-width: 1000px) {
+        width: auto;
+      }
+      @media (max-width: 700px) {
+        padding: 0;
+      }
     }
 
     & > span:not(:last-child) {
@@ -100,9 +110,10 @@
 
   }
 
-  & > form:last-child {
+  & > div > form:last-child {
     display: none;
   }
+
 }
 
 .main-form__wrong {
