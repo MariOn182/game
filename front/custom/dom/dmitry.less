@@ -1,0 +1,72 @@
+p, div, a, section, article {
+  margin: 0;
+  padding: 0;
+}
+
+.lh-inherit {
+  line-height: inherit !important;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.header {
+  height: 60px;
+  background: #383838;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+.dropdown-info {
+  line-height: 24px;
+  min-width: 280px;
+
+  &__img {
+    border-radius: 23px;
+    width: 45px;
+    height: 45px;
+    overflow: hidden;
+
+    & img {
+      height: 100%;
+    }
+  }
+}
+
+.icon {
+  &_big {
+    font-size: 21px;
+  }
+}
+
+.icon-number {
+  position: absolute;
+  right: -5px;
+  top: -3px;
+  border-radius: 10px;
+  font-size: 9px;
+  background: #fff;
+  border: 2px solid #383838;
+  width: 15px;
+  height: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-style: normal;
+  color: @global-color;
+  font-family: @global-font-family;
+}
+
+.consultation {
+  display: flex;
+
+  &__img {
+    background: #E0483B;
+    padding-left: 40px;
+  }
+}
