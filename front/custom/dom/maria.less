@@ -1,6 +1,6 @@
 .content {
   background: url(../../pages/assets/images/main.png) no-repeat, linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.5) 100%);
-  height: 100vh;
+  height: calc(~"100vh - 130px");
   position: relative;
   background-blend-mode: darken;
   background-size: cover;
@@ -137,9 +137,9 @@
   text-align: center;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  transition: 0.8s;
+  transition: 0.5s;
   cursor: pointer;
-  border: 1px solid @dom-red-color;
+  border: 3px solid @dom-red-color;
 
   &:hover {
     background: #fff;
