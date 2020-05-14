@@ -5,7 +5,7 @@
   background-blend-mode: darken;
   background-size: cover;
 
-  @media (max-width: 700px) {
+  @media (max-width: @breakpoint-small) {
     background: #fff;
   }
 
@@ -27,7 +27,7 @@
     padding-top: 85px;
   }
 
-  @media (max-width: 700px) {
+  @media (max-width: @breakpoint-small) {
     flex-direction: column;
     padding-top: 45px;
   }
@@ -44,7 +44,7 @@
       font-size: 30px;
     }
 
-    @media (max-width: 700px) {
+    @media (max-width: @breakpoint-small) {
       color: @global-color;
       margin-bottom: 10px;
       font-size: 24px;
@@ -60,7 +60,7 @@
     width: fit-content;
     margin-left: 10px;
 
-    @media (max-width: 700px) {
+    @media (max-width: @breakpoint-small) {
       padding: 0;
       margin: 0;
     }
@@ -95,7 +95,7 @@
       @media (max-width: 1000px) {
         width: auto;
       }
-      @media (max-width: 700px) {
+      @media (max-width: @breakpoint-small) {
         padding: 0;
       }
     }
@@ -146,7 +146,7 @@
     color: @dom-red-color;
   }
 
-  @media (max-width: 700px) {
+  @media (max-width: @breakpoint-small) {
     width: 100%;
   }
 }
