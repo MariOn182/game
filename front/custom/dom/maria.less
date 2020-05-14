@@ -60,6 +60,10 @@
     width: fit-content;
     margin-left: 10px;
 
+    @media (max-width: 700px) {
+      padding: 0;
+      margin: 0;
+    }
 
     & > input {
       padding: 13px 13px 13px 0;
@@ -125,7 +129,6 @@
 .user-button {
   background: @dom-red-color;
   outline: none;
-  border: none;
   padding: 10px 20px;
   color: #fff;
   width: 130px;
@@ -137,11 +140,11 @@
   text-transform: uppercase;
   transition: 0.8s;
   cursor: pointer;
+  border: 1px solid @dom-red-color;
 
   &:hover {
     background: #fff;
     color: @dom-red-color;
-    border: 1px solid @dom-red-color;
   }
 
   @media (max-width: 700px) {
