@@ -44,40 +44,98 @@
                 </ul>
             </div>
 
-            <div class="uk-navbar-right">
-                <ul class="uk-navbar-nav">
-                    <li class="uk-visible@s">
-                        <a href="#">Ваш менеджер <span uk-icon="icon: triangle-down" class="lh-inherit"></span></a>
-                        <div uk-dropdown="pos: bottom-left" class="dropdown-info">
-                            <div class="dropdown-info__img">
-                                <img src="./assets/images/photo.png" alt="фото Вениамин Ротенбергер">
-                            </div>
-                            <p>
-                                Вениамин Ротенбергер
-                            </p>
-                            <p>
-                                <i class="icon-phone"></i> +7 (999) 999-99-99
-                            </p>
-                            <p>
-                                <i class="icon-mail-alt"></i> manager@72dom.com
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="#"><i class="icon-heart-empty icon_big uk-position-relative"><span class="icon-number">19</span></i></a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="icon-article icon_big uk-position-relative"><span
-                                class="icon-number icon-number_rotate">3</span></i></a>
-                    </li>
-                    <li>
-                        <a href="#"></a>
-                    </li>
-                </ul>
-            </div>
+			<div class="uk-navbar-right">
+				<ul class="uk-navbar-nav">
+					<li class="uk-visible@s">
+						<a href="#">Ваш менеджер <span uk-icon="icon: triangle-down" class="lh-inherit"></span></a>
+						<div uk-dropdown="pos: bottom-left" class="manager">
+							<div class="manager__img">
+								<img src="./assets/images/photo.png" alt="фото Вениамин Ротенбергер">
+							</div>
+							<p>
+								Вениамин Ротенбергер
+							</p>
+							<p>
+								<i class="icon-phone"></i> +7 (999) 999-99-99
+							</p>
+							<p>
+								<i class="icon-mail-alt"></i> manager@72dom.com
+							</p>
+						</div>
+					</li>
+					<li>
+						<a href="#"><i class="icon-heart-empty icon_big uk-position-relative"><span class="icon-number">19</span></i></a>
+					</li>
+					<li>
+						<a href="#"><i class="icon-article icon_big uk-position-relative"><span class="icon-number icon-number_rotate">3</span></i></a>
+					</li>
+					<li class="uk-hidden@s">
+						<a uk-toggle href="#mobile-menu">
+							<div class="hamburger">
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
 
-        </nav>
-    </div>
+		</nav>
+	</div>
+	<div uk-offcanvas id="mobile-menu" class="uk-offcanvas mobile-menu">
+		<div class="uk-offcanvas-bar">
+			<nav uk-navbar>
+				<ul class="mobile-menu__nav">
+					<li>
+						<a href="#">Квартиры</a>
+						<ul class="mobile-menu__links">
+							<li>
+								<a href="#">Студии</a>
+							</li>
+							<li>
+								<a href="#">Однокомнатные</a>
+							</li>
+							<li>
+								<a href="#">Двухкомнатные</a>
+							</li>
+							<li>
+								<a href="#">Трехкомнатные</a>
+							</li>
+							<li>
+								<a href="#">Все</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">Начальный капитал</a>
+					</li>
+					<li>
+						<a href="#">Пункт меню</a>
+					</li>
+				</ul>
+			</nav>
+			<div class="manager manager_mob ">
+				<div class="manager__img manager__img_mob">
+					<img src="./assets/images/photo.png" alt="фото Вениамин Ротенбергер">
+				</div>
+				<div class="manager__text">
+					<p>
+						Ваш менеджер:
+					</p>
+					<p>
+						Вениамин Ротенбергер
+					</p>
+					<p>
+						<i class="icon-phone"></i> +7 (999) 999-99-99
+					</p>
+					<p>
+						<i class="icon-mail-alt"></i> manager@72dom.com
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
 </header>
 
 <main>
@@ -114,22 +172,37 @@
 </main>
 
 <footer class="footer">
-    <div class="consultation">
-        <div class="uk-container">
-            <div class="consultation__wrap">
-                <div class="consultation__img">
-                    <img src="./assets/images/consultation.png">
-                </div>
-                <div class="consultation__body">
-                    <h2>
-                        Консультация<br>кредитного брокера
-                    </h2>
-                    <p>Услуга бесплатная</p>
-                    <button>Получить консультацию</button>
-                </div>
-            </div>
-        </div>
-    </div>
+	<div class="consultation__wrap uk-hidden">
+		<div class="uk-container mobile-no-padding">
+			<div class="consultation">
+				<div class="consultation__img">
+					<img src="./assets/images/consultation.png">
+				</div>
+				<div class="consultation__body">
+					<h2>
+						Консультация<br>кредитного брокера
+					</h2>
+					<p>Услуга бесплатная</p>
+					<button class="consultation__btn">Получить</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="bottom__wrap">
+		<div class="uk-container">
+			<div class="bottom">
+				<span>
+					© 2020 ГК Дом
+				</span>
+				<span>
+					Не является публичной офертой
+				</span>
+				<a href="#" class="bottom__link">
+					Политика конфиденциальности
+				</a>
+			</div>
+		</div>
+	</div>
 </footer>
 
 </body>
