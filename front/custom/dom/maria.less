@@ -7,6 +7,8 @@
 
   @media (max-width: @breakpoint-small) {
     background: #fff;
+    height: auto;
+    padding-bottom: 60px;
   }
 
   &__wrap {
@@ -16,14 +18,28 @@
     position: absolute;
     width: 100%;
   }
+
+  &_no-image {
+    background: #F5F5F5;
+    height: auto;
+    padding-bottom: 40px;
+    @media (max-width: @breakpoint-medium) {
+      padding-bottom: 60px;
+    }
+  }
 }
 
-.main {
+
+.main, .main-grid__header {
   display: flex;
   justify-content: space-between;
+}
+
+
+.main {
   padding: 100px 0 0;
 
-  @media (max-width: 1024px) {
+  @media (max-width: @breakpoint-medium) {
     padding-top: 85px;
   }
 
@@ -40,7 +56,7 @@
     text-transform: uppercase;
     letter-spacing: 1px;
 
-    @media (max-width: 1024px) {
+    @media (max-width: @breakpoint-medium) {
       font-size: 30px;
     }
 
@@ -89,7 +105,7 @@
     & > span {
       color: @global-color;
       width: 400px;
-      @media (max-width: 1024px) {
+      @media (max-width: @breakpoint-medium) {
         width: 330px;
       }
       @media (max-width: 1000px) {
@@ -106,13 +122,45 @@
 
     & > span, & > input {
       font-size: 18px;
-      @media (max-width: 1024px) {
+      @media (max-width: @breakpoint-medium) {
         font-size: 16px;
       }
     }
 
     & > button {
       margin-top: 35px;
+    }
+  }
+
+  &_small-padding {
+    padding-top: 65px;
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: @breakpoint-medium) {
+      padding-top: 55px;
+      grid-template-columns: repeat(3, auto);
+    }
+
+    @media (max-width: @breakpoint-small) {
+      padding-top: 45px;
+      grid-template-columns: auto;
+    }
+
+    & > h1 {
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 35px;
+      line-height: 45px;
+      color: @global-color;
+      margin-bottom: 30px;
+      @media (max-width: @breakpoint-medium) {
+        font-size: 24px;
+        margin-bottom: 45px;
+      }
+      @media (max-width: @breakpoint-small) {
+        margin-bottom: 20px;
+      }
     }
   }
 
@@ -123,6 +171,93 @@
   line-height: 20px !important;
   color: #C73000 !important;
   margin: 0 !important;
+}
+
+.main-grid {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-gap: 30px;
+
+  @media (max-width: @breakpoint-medium) {
+    grid-template-columns: repeat(2, auto);
+  }
+
+  @media (max-width: @breakpoint-small) {
+    grid-template-columns: auto;
+    grid-gap: 40px;
+  }
+
+  &__item {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+  }
+
+  &__header {
+    margin-bottom: 25px;
+  }
+
+  &__img {
+    margin-bottom: 15px;
+
+
+  }
+
+  &__flat {
+    text-align: center;
+    height: 220px;
+  }
+
+  &__info {
+    margin-bottom: 5px;
+
+    & > div > p {
+
+      &:not(:last-child) {
+        margin-bottom: 5px;
+      }
+
+      & > span {
+        margin-left: 10px;
+      }
+    }
+
+
+    & > div:not(:last-child) {
+      margin-bottom: 15px;
+    }
+
+
+  }
+
+  &__data {
+    & > img {
+      margin-right: 5px;
+    }
+
+    & > span {
+      font-size: 10px;
+      color: #C6C6C6;
+    }
+  }
+}
+
+.main-grid__img, .main-grid__info_underlined {
+  &:after {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    content: '';
+    display: block;
+    margin-top: 20px;
+  }
+}
+
+.main-grid__info-margin-bottom-big {
+  margin-bottom: 25px !important;
+}
+
+.main-grid__header, .main-grid__info > div {
+  padding: 5px 15px 0;
 }
 
 .user-button {
@@ -149,5 +284,79 @@
   @media (max-width: @breakpoint-small) {
     width: 100%;
   }
+
+  &_white {
+    background: #fff;
+    color: @dom-red-color;
+
+    &:hover {
+      background: @dom-red-color;
+      color: #fff;
+    }
+  }
 }
 
+.buttons {
+  display: flex;
+  flex-direction: column;
+
+  & > button {
+    width: 100%;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.icons {
+  transition: 0.5s;
+
+  & > a > i:hover {
+    color: @dom-red-color;
+  }
+
+  & > a:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.sale {
+  color: #28D919;
+  font-size: 12px;
+}
+
+.user-price {
+  color: @dom-red-color;
+}
+
+.muted-color {
+  color: @dom-grey-text;
+}
+
+.not-uppercase {
+  text-transform: none;
+}
+
+.block-static-height {
+  height: 40px;
+  width: 300px;
+  margin-bottom: 5px;
+  @media (max-width: @breakpoint-small) {
+    height: auto;
+    width: auto;
+  }
+}
+
+.font-size-small {
+  font-size: 12px;
+}
+
+.month-payment {
+  display: flex;
+  align-items: center;
+
+  & > a {
+    margin-left: 5px;
+  }
+}
