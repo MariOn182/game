@@ -195,6 +195,11 @@
   align-self: center;
   text-align: center;
   align-items: center;
+  padding-top: 10px;
+
+  @media (@breakpoint-small) {
+    padding-top: 20px;
+  }
 
   & > span {
     font-size: 30px;
@@ -202,10 +207,13 @@
     color: #DCDCDC;
     margin-bottom: 40px;
     width: 345px;
+    @media (max-width: @breakpoint-small) {
+      width: 100%;
+    }
   }
 }
 
-.main__form-error{
+.main__form-error {
   font-size: 12px !important;
   line-height: 20px !important;
   color: #C73000 !important;
@@ -299,7 +307,7 @@
   padding: 5px 15px 0;
 }
 
-.user-button {
+.button {
   background: @dom-red-color;
   outline: none;
   padding: 10px 40px;
@@ -432,6 +440,16 @@
   text-transform: uppercase;
   margin-bottom: 25px;
   display: none;
+  border-bottom: 1px solid @dom-grey-text;
+  width: fit-content;
+  font-weight: bold;
+  letter-spacing: 0.7px;
+  height: 15px;
+
+  & > span > svg > polyline, & > span > svg > line {
+    stroke-width: 2px;
+  }
+
   @media (max-width: @breakpoint-small) {
     display: flex;
     align-items: center;
