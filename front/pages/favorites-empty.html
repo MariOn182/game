@@ -4,9 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Избранное (пусто)</title>
+    <title>Избранное</title>
     <script src="../tests/js/test.js"></script>
-    <script src="../dist/js/script.js"></script>
 </head>
 
 <body>
@@ -58,10 +57,10 @@
                                 Вениамин Ротенбергер
                             </p>
                             <p>
-                                <a href="tel:+7 (999) 999-99-99"><i class="icon-phone"></i> +7 (999) 999-99-99</a>
+                                <i class="icon-phone"></i> +7 (999) 999-99-99
                             </p>
                             <p>
-                                <a href="mailto:manager@72dom.com"><i class="icon-mail-alt"></i> manager@72dom.com</a>
+                                <i class="icon-mail-alt"></i> manager@72dom.com
                             </p>
                         </div>
                     </li>
@@ -74,7 +73,9 @@
                     </li>
                     <li class="uk-hidden@s">
                         <a uk-toggle href="#mobile-menu">
-                            <div class="hamburger" id="hamburger">
+                            <div class="hamburger">
+                                <span></span>
+                                <span></span>
                                 <span></span>
                             </div>
                         </a>
@@ -128,10 +129,10 @@
                         Вениамин Ротенбергер
                     </p>
                     <p>
-                        <a href="tel:+7 (999) 999-99-99"><i class="icon-phone"></i> +7 (999) 999-99-99</a>
+                        <i class="icon-phone"></i> +7 (999) 999-99-99
                     </p>
                     <p>
-                        <a href="mailto:manager@72dom.com"><i class="icon-mail-alt"></i> manager@72dom.com</a>
+                        <i class="icon-mail-alt"></i> manager@72dom.com
                     </p>
                 </div>
             </div>
@@ -139,7 +140,7 @@
     </div>
 </header>
 
-
+<main>
     <section class="content content_no-image-full-height">
 
         <div class="uk-container">
@@ -153,14 +154,14 @@
                     <span>Вы ещё ничего не добавили в избранное</span>
 
                     <div class="buttons">
-                        <button type="submit" class="button">Показать квартиры</button>
+                        <button type="submit" class="user-button">Показать квартиры</button>
                     </div>
 
                 </div>
             </div>
         </div>
     </section>
-
+</main>
 
 <footer class="footer">
     <div class="consultation__wrap uk-hidden">
@@ -174,7 +175,7 @@
                         Консультация<br>кредитного брокера
                     </h2>
                     <p>Услуга бесплатная</p>
-                    <button class="button button_mob-small">Получить<span class="uk-visible@s"> консультацию</span></button>
+                    <button class="consultation__btn">Получить</button>
                 </div>
             </div>
         </div>
