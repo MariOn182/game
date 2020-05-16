@@ -4,16 +4,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Index</title>
-
+    <title>Избранное пустое</title>
     <script src="../tests/js/test.js"></script>
-
-
 </head>
 
-
 <body>
-
 
 <header class="header">
     <div class="uk-container">
@@ -78,11 +73,11 @@
                     </li>
                     <li class="uk-hidden@s">
                         <a uk-toggle href="#mobile-menu">
-
-                            <div class="hamburger" id="hamburger">
+                            <div class="hamburger">
+                                <span></span>
+                                <span></span>
                                 <span></span>
                             </div>
-
                         </a>
                     </li>
                 </ul>
@@ -146,36 +141,25 @@
 </header>
 
 <main>
-    <section class="content">
+    <section class="content content_no-image-full-height">
 
         <div class="uk-container">
-            <div class="main uk-child-width-1-2@l">
 
-                <div>
-                    <h1 class="main__title">
-                        Вход в личный кабинет
-                    </h1>
+            <div class="main main_small-padding">
+                <a href="./flats-list.html" class="back font-size-small muted-color"><span
+                        uk-icon="icon: arrow-left"></span>назад к списку квартир</a>
+                <h1>избранное </h1>
+                <div class="main__header main__header_column">
+
+                    <span>Вы ещё ничего не добавили в избранное</span>
+
+                    <div class="buttons">
+                        <button type="submit" class="button">Показать квартиры</button>
+                    </div>
+
                 </div>
-
-                <div>
-                    <form class="main__form" method="post">
-                        <span>Этот сервис трам-пам-пам, объясняем выгоду скидки, как это работает</span>
-                        <span>Ваш номер телефона</span>
-                        <input type="tel" placeholder="+7 (___) ___-__-__" required>
-                        <span class="main__form-error uk-hidden">Введен неверный номер</span>
-                        <button type="submit" class="button">Войти</button>
-                    </form>
-
-                    <form class="main__form uk-hidden" method="post">
-                        <span>Мы отправили код подтверждения на номер 8 (999) 999-99-99 </span>
-                        <input type="number" placeholder="Код подтверждения" required>
-                        <span class="main__form-error">Введен неверный код</span>
-                    </form>
-                </div>
-
             </div>
         </div>
-
     </section>
 </main>
 
@@ -213,13 +197,6 @@
     </div>
 </footer>
 
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-        document.getElementById('hamburger').onclick = function () {
-            document.getElementById('hamburger').classList.toggle('hamburger_closed');
-        }
-    })
-</script>
-
 </body>
+
 </html>

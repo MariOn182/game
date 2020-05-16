@@ -27,6 +27,12 @@
       padding-bottom: 60px;
     }
   }
+
+  &_no-image-full-height {
+    height: calc(~"100vh - 130px");
+    background: #F5F5F5;
+
+  }
 }
 
 
@@ -48,7 +54,7 @@
     padding-top: 45px;
   }
 
-  &-h {
+  &__title {
     color: #fff;
     font-weight: 500;
     font-size: 40px;
@@ -68,13 +74,23 @@
     }
   }
 
-  &-form {
+  &__form {
     background: #fff;
     padding: 30px;
     display: flex;
     flex-direction: column;
-    width: fit-content;
     margin-left: 10px;
+    color: @global-color;
+    font-size: 18px;
+    width: 400px;
+
+    @media (max-width: @breakpoint-medium) {
+      font-size: 16px;
+      width: 330px;
+    }
+    @media (max-width: 1000px) {
+      width: auto;
+    }
 
     @media (max-width: @breakpoint-small) {
       padding: 0;
@@ -102,29 +118,8 @@
       margin-bottom: 0
     }
 
-    & > span {
-      color: @global-color;
-      width: 400px;
-      @media (max-width: @breakpoint-medium) {
-        width: 330px;
-      }
-      @media (max-width: 1000px) {
-        width: auto;
-      }
-      @media (max-width: @breakpoint-small) {
-        padding: 0;
-      }
-    }
-
     & > span:not(:last-child) {
       margin-bottom: 20px;
-    }
-
-    & > span, & > input {
-      font-size: 18px;
-      @media (max-width: @breakpoint-medium) {
-        font-size: 16px;
-      }
     }
 
     & > button {
@@ -153,20 +148,72 @@
       font-size: 35px;
       line-height: 45px;
       color: @global-color;
-      margin-bottom: 30px;
+      margin: 0 0 30px;
       @media (max-width: @breakpoint-medium) {
         font-size: 24px;
-        margin-bottom: 45px;
+        margin: 0 0 45px;
       }
       @media (max-width: @breakpoint-small) {
-        margin-bottom: 20px;
+        margin: 0 0 20px;
       }
     }
+
   }
 
 }
 
-.main-form__wrong {
+.main__header {
+  background: #fff;
+  padding: 40px 30px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  @media (max-width: 1200px) {
+    flex-direction: column;
+    padding: 20px 30px 30px;
+  }
+  @media (max-width: @breakpoint-small) {
+    padding: 0;
+    background: inherit;
+  }
+
+  & > span {
+    font-size: 12px;
+    line-height: 18px;
+    width: 330px;
+    @media (max-width: 1200px) {
+      width: 100%;
+      margin-bottom: 25px;
+      text-align: center;
+    }
+  }
+}
+
+.main__header_column {
+  flex-direction: column;
+  background: inherit;
+  align-self: center;
+  text-align: center;
+  align-items: center;
+  padding-top: 10px;
+
+  @media (@breakpoint-small) {
+    padding-top: 20px;
+  }
+
+  & > span {
+    font-size: 30px;
+    line-height: 36px;
+    color: #DCDCDC;
+    margin-bottom: 40px;
+    width: 345px;
+    @media (max-width: @breakpoint-small) {
+      width: 100%;
+    }
+  }
+}
+
+.main__form-error {
   font-size: 12px !important;
   line-height: 20px !important;
   color: #C73000 !important;
@@ -260,12 +307,11 @@
   padding: 5px 15px 0;
 }
 
-.user-button {
+.button {
   background: @dom-red-color;
   outline: none;
-  padding: 10px 20px;
+  padding: 10px 40px;
   color: #fff;
-  width: 130px;
   font-weight: bold;
   font-size: 14px;
   line-height: 30px;
@@ -275,6 +321,7 @@
   transition: 0.5s;
   cursor: pointer;
   border: 3px solid @dom-red-color;
+  width: fit-content;
 
   &:hover {
     background: #fff;
@@ -294,6 +341,11 @@
       color: #fff;
     }
   }
+
+  &_full-width {
+    width: 100%;
+  }
+
 }
 
 .buttons {
@@ -301,10 +353,33 @@
   flex-direction: column;
 
   & > button {
-    width: 100%;
 
     &:not(:last-child) {
       margin-bottom: 20px;
+    }
+  }
+
+  &_row {
+    flex-direction: row;
+    width: 65%;
+
+    & > button {
+      height: fit-content;
+
+      &:first-child {
+        margin-right: 20px;
+        @media (max-width: @breakpoint-small) {
+          margin-bottom: 10px;
+        }
+      }
+
+    }
+
+    @media (max-width: 1200px) {
+      width: 100%;
+    }
+    @media (max-width: @breakpoint-small) {
+      flex-direction: column;
     }
   }
 }
@@ -360,3 +435,25 @@
     margin-left: 5px;
   }
 }
+
+.back {
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  display: none;
+  border-bottom: 1px solid @dom-grey-text;
+  width: fit-content;
+  font-weight: bold;
+  letter-spacing: 0.7px;
+  height: 15px;
+
+  & > span > svg > polyline, & > span > svg > line {
+    stroke-width: 2px;
+  }
+
+  @media (max-width: @breakpoint-small) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+
