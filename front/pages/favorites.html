@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Избранное</title>
     <script src="../tests/js/test.js"></script>
-    <script src="../dist/js/script.js"></script>
 </head>
 
 <body>
@@ -58,10 +57,10 @@
                                 Вениамин Ротенбергер
                             </p>
                             <p>
-                                <a href="tel:+7 (999) 999-99-99"><i class="icon-phone"></i> +7 (999) 999-99-99</a>
+                                <i class="icon-phone"></i> +7 (999) 999-99-99
                             </p>
                             <p>
-                                <a href="mailto:manager@72dom.com"><i class="icon-mail-alt"></i> manager@72dom.com</a>
+                                <i class="icon-mail-alt"></i> manager@72dom.com
                             </p>
                         </div>
                     </li>
@@ -74,7 +73,9 @@
                     </li>
                     <li class="uk-hidden@s">
                         <a uk-toggle href="#mobile-menu">
-                            <div class="hamburger" id="hamburger">
+                            <div class="hamburger">
+                                <span></span>
+                                <span></span>
                                 <span></span>
                             </div>
                         </a>
@@ -128,10 +129,10 @@
                         Вениамин Ротенбергер
                     </p>
                     <p>
-                        <a href="tel:+7 (999) 999-99-99"><i class="icon-phone"></i> +7 (999) 999-99-99</a>
+                        <i class="icon-phone"></i> +7 (999) 999-99-99
                     </p>
                     <p>
-                        <a href="mailto:manager@72dom.com"><i class="icon-mail-alt"></i> manager@72dom.com</a>
+                        <i class="icon-mail-alt"></i> manager@72dom.com
                     </p>
                 </div>
             </div>
@@ -139,57 +140,43 @@
     </div>
 </header>
 
-
+<main>
     <section class="content content_no-image">
 
         <div class="uk-container">
 
             <div class="main main_small-padding">
-                <a href="./flats-list.html" class="back font-size-small muted-color"><span
-                        uk-icon="icon: arrow-left"></span>назад к списку квартир</a>
+                <a href="./flats-list.html" class="back font-size-small muted-color"><span uk-icon="icon: arrow-left"></span>назад к списку квартир</a>
                 <h1>избранное </h1>
-
-                <div class="main__header main__header_column uk-hidden">
-
-                    <span>Вы ещё ничего не добавили в избранное</span>
-
-                    <div class="buttons">
-                        <button type="submit" class="button">Показать квартиры</button>
-                    </div>
-
-                </div>
-
                 <div class="main__header">
 
                     <span>Подборку можно скопировать и отправить ссылкой или сразу отправить вашему менеджеру</span>
 
                     <div class="buttons buttons_row uk-child-width-1-2">
-                        <button type="submit" class="button button_full-width">скопировать ссылку</button>
-                        <button type="submit" class="button button_white button_full-width button_full-width">отправить
-                            менеджеру
-                        </button>
+                        <button type="submit" class="user-button user-button_full-width">скопировать ссылку</button>
+                        <button type="submit" class="user-button user-button_white user-button_full-width">отправить менеджеру</button>
                     </div>
 
                 </div>
 
-                <div class="grid">
+                <div class="main-grid">
 
-                    <div class="flat">
+                    <div class="main-grid__item">
 
-                        <div class="flat__header ">
-                            <div class="flat__top">
+                        <div class="main-grid__img ">
+                            <div class="main-grid__header">
 
-                                <div class="flat__data"><img src="./assets/images/eye.png" alt="eye">
+                                <div class="main-grid__data"><img src="./assets/images/eye.png" alt="eye">
                                     <span>20.04.2020</span></div>
 
                                 <div class="icons">
                                     <a href="#"><i class="icon-article icon_big uk-position-relative"></i></a>
-                                    <a href="#"><i class="icon-trash-empty icon_big uk-position-relative"></i></a>
+                                    <a href="#"><i class="icon-heart-empty icon_big uk-position-relative"></i></a>
                                 </div>
 
                             </div>
 
-                            <div class="flat__img" uk-lightbox>
+                            <div class="main-grid__flat" uk-lightbox>
                                 <a class="uk-inline" href="./assets/images/FlatImage.png" data-caption="Квартира">
                                     <img src="./assets/images/FlatImage.png" alt="Квартира">
                                 </a>
@@ -197,11 +184,13 @@
 
                         </div>
 
-                        <div class="flat__info flat__info_underlined">
+                        <div class="main-grid__info main-grid__info_underlined">
 
                             <div>
-                                <p class="muted-color font-size-small block-static-height">ЖК республика, ГП-3,
-                                    срок сдачи: IV кв. 2020</p>
+                                <div class="block-static-height">
+                                    <p class="muted-color font-size-small">ЖК республика, ГП-3,
+                                        срок сдачи: IV кв. 2020</p>
+                                </div>
                                 <p>Двухкомнатная<span class="muted-color">53,3 м²</span></p>
                                 <p class="muted-color font-size-small">артикул 999999</p>
                             </div>
@@ -219,61 +208,59 @@
 
                         </div>
 
-                        <div class="flat__info flat__info-margin-bottom-big">
+                        <div class="main-grid__info main-grid__info-margin-bottom-big">
 
                             <div>
-                                <p class="muted-color font-size-small month-payment">Ежемесячные платежи<i
-                                        class="icon-question-circle-o icon_big uk-position-relative"
-                                        uk-tooltip="title: Дополнительная сумма, которая прибавится к первоначальному взносу.; pos: bottom; delay: 500"></i>
-                                </p>
+                                <p class="muted-color font-size-small month-payment">Ежемесячные платежи <a href="#"><i
+                                        class="icon-question-circle-o icon_big uk-position-relative" uk-tooltip="title: Дополнительная сумма, которая прибавится к первоначальному взносу.; pos: bottom; delay: 500"></i></a></p>
                             </div>
 
                             <div>
                                 <p class="muted-color not-uppercase">Базовый рассчёт</p>
-                                <p class="muted-color">от 50 665 ₽/мес</p>
+                                <p class="muted-color">от 50 665 ₽/месяц</p>
                             </div>
 
                             <div>
                                 <p class="muted-color not-uppercase">Ваш платёж</p>
-                                <p>от 48 011 ₽/мес</p>
+                                <p>от 48 011 ₽/месяц</p>
                             </div>
 
                             <div>
                                 <p class="not-uppercase">Ваш платёж после показа</p>
-                                <p>от 46 600 ₽/мес<span class="sale">-370 000 ₽</span></p>
+                                <p>от 46 600 ₽/месяц<span class="sale">-370 000 ₽</span></p>
                             </div>
 
                             <div>
                                 <p class="not-uppercase">Ваш платёж после брони</p>
-                                <p>от 43 378 ₽/мес<span class="sale">-480 000 ₽</span></p>
+                                <p>от 43 378 ₽/месяц<span class="sale">-480 000 ₽</span></p>
                             </div>
 
                         </div>
 
                         <div class="buttons">
-                            <button type="submit" class="button button_full-width">записаться на показ</button>
-                            <button type="submit" class="button button_full-width">онлайн показ</button>
-                            <button type="submit" class="button button_white button_full-width">Забронировать</button>
+                            <button type="submit" class="user-button">записаться на показ</button>
+                            <button type="submit" class="user-button">онлайн показ</button>
+                            <button type="submit" class="user-button user-button_white">Забронировать</button>
                         </div>
 
                     </div>
 
-                    <div class="flat">
+                    <div class="main-grid__item">
 
-                        <div class="flat__header">
-                            <div class="flat__top">
+                        <div class="main-grid__img ">
+                            <div class="main-grid__header">
 
-                                <div class="flat__data"><img src="./assets/images/eye.png" alt="eye">
+                                <div class="main-grid__data"><img src="./assets/images/eye.png" alt="eye">
                                     <span>20.04.2020</span></div>
 
                                 <div class="icons">
                                     <a href="#"><i class="icon-article icon_big uk-position-relative"></i></a>
-                                    <a href="#"><i class="icon-trash-empty icon_big uk-position-relative"></i></a>
+                                    <a href="#"><i class="icon-heart-empty icon_big uk-position-relative"></i></a>
                                 </div>
 
                             </div>
 
-                            <div class="flat__img" uk-lightbox>
+                            <div class="main-grid__flat" uk-lightbox>
                                 <a class="uk-inline" href="./assets/images/FlatImage(1).png" data-caption="Квартира">
                                     <img src="./assets/images/FlatImage(1).png" alt="Квартира">
                                 </a>
@@ -281,13 +268,14 @@
 
                         </div>
 
-                        <div class="flat__info flat__info_underlined">
+                        <div class="main-grid__info main-grid__info_underlined">
 
                             <div>
-                                <p class="muted-color p-40-height font-size-small block-static-height">ЖК республика,
-                                    ГП-3, срок сдачи:
-                                    IV
-                                    кв.</p>
+                                <div class="block-static-height">
+                                    <p class="muted-color p-40-height font-size-small">ЖК республика, ГП-3, срок сдачи:
+                                        IV
+                                        кв.</p>
+                                </div>
                                 <p>Двухкомнатная<span class="muted-color">53,3 м²</span></p>
                                 <p class="muted-color font-size-small">артикул 999999</p>
                             </div>
@@ -305,61 +293,59 @@
 
                         </div>
 
-                        <div class="flat__info flat__info-margin-bottom-big">
+                        <div class="main-grid__info main-grid__info-margin-bottom-big">
 
                             <div>
-                                <p class="muted-color font-size-small month-payment">Ежемесячные платежи<i
-                                        class="icon-question-circle-o icon_big uk-position-relative"
-                                        uk-tooltip="title: Дополнительная сумма, которая прибавится к первоначальному взносу.; pos: bottom; delay: 500"></i>
-                                </p>
+                                <p class="muted-color font-size-small month-payment">Ежемесячные платежи <a href="#"><i
+                                        class="icon-question-circle-o icon_big uk-position-relative" uk-tooltip="title: Дополнительная сумма, которая прибавится к первоначальному взносу.; pos: bottom; delay: 500"></i></a></p>
                             </div>
 
                             <div>
                                 <p class="muted-color not-uppercase">Базовый рассчёт</p>
-                                <p class="muted-color">от 50 665 ₽/мес</p>
+                                <p class="muted-color">от 50 665 ₽/месяц</p>
                             </div>
 
                             <div>
                                 <p class="muted-color not-uppercase">Ваш платёж</p>
-                                <p>от 48 011 ₽/мес</p>
+                                <p>от 48 011 ₽/месяц</p>
                             </div>
 
                             <div>
                                 <p class="not-uppercase">Ваш платёж после показа</p>
-                                <p>от 46 600 ₽/мес<span class="sale">-370 000 ₽</span></p>
+                                <p>от 46 600 ₽/месяц<span class="sale">-370 000 ₽</span></p>
                             </div>
 
                             <div>
                                 <p class="not-uppercase">Ваш платёж после брони</p>
-                                <p>от 43 378 ₽/мес<span class="sale">-480 000 ₽</span></p>
+                                <p>от 43 378 ₽/месяц<span class="sale">-480 000 ₽</span></p>
                             </div>
 
                         </div>
 
                         <div class="buttons">
-                            <button type="submit" class="button button_full-width">записаться на показ</button>
-                            <button type="submit" class="button button_full-width">онлайн показ</button>
-                            <button type="submit" class="button button_white button_full-width">Забронировать</button>
+                            <button type="submit" class="user-button">записаться на показ</button>
+                            <button type="submit" class="user-button">онлайн показ</button>
+                            <button type="submit" class="user-button user-button_white">Забронировать</button>
                         </div>
 
                     </div>
 
-                    <div class="flat">
+                    <div class="main-grid__item">
 
-                        <div class="flat__header">
-                            <div class="flat__top">
+                        <div class="main-grid__img ">
+                            <div class="main-grid__header">
 
-                                <div class="flat__data"><img src="./assets/images/eye.png" alt="eye">
+                                <div class="main-grid__data"><img src="./assets/images/eye.png" alt="eye">
                                     <span>20.04.2020</span></div>
 
                                 <div class="icons">
                                     <a href="#"><i class="icon-article icon_big uk-position-relative"></i></a>
-                                    <a href="#"><i class="icon-trash-empty icon_big uk-position-relative"></i></a>
+                                    <a href="#"><i class="icon-heart-empty icon_big uk-position-relative"></i></a>
                                 </div>
 
                             </div>
 
-                            <div class="flat__img" uk-lightbox>
+                            <div class="main-grid__flat" uk-lightbox>
                                 <a class="uk-inline" href="./assets/images/FlatImage.png" data-caption="Квартира">
                                     <img src="./assets/images/FlatImage.png" alt="Квартира">
                                 </a>
@@ -367,11 +353,13 @@
 
                         </div>
 
-                        <div class="flat__info flat__info_underlined">
+                        <div class="main-grid__info main-grid__info_underlined">
 
                             <div>
-                                <p class="muted-color font-size-small block-static-height">ЖК республика, ГП-3,
-                                    срок сдачи: IV кв. 2020</p>
+                                <div class="block-static-height">
+                                    <p class="muted-color font-size-small">ЖК республика, ГП-3,
+                                        срок сдачи: IV кв. 2020</p>
+                                </div>
                                 <p>Двухкомнатная<span class="muted-color">53,3 м²</span></p>
                                 <p class="muted-color font-size-small">артикул 999999</p>
                             </div>
@@ -389,61 +377,59 @@
 
                         </div>
 
-                        <div class="flat__info flat__info-margin-bottom-big">
+                        <div class="main-grid__info main-grid__info-margin-bottom-big">
 
                             <div>
-                                <p class="muted-color font-size-small month-payment">Ежемесячные платежи<i
-                                        class="icon-question-circle-o icon_big uk-position-relative"
-                                        uk-tooltip="title: Дополнительная сумма, которая прибавится к первоначальному взносу.; pos: bottom; delay: 500"></i>
-                                </p>
+                                <p class="muted-color font-size-small month-payment">Ежемесячные платежи <a href="#"><i
+                                        class="icon-question-circle-o icon_big uk-position-relative" uk-tooltip="title: Дополнительная сумма, которая прибавится к первоначальному взносу.; pos: bottom; delay: 500"></i></a></p>
                             </div>
 
                             <div>
                                 <p class="muted-color not-uppercase">Базовый рассчёт</p>
-                                <p class="muted-color">от 50 665 ₽/мес</p>
+                                <p class="muted-color">от 50 665 ₽/месяц</p>
                             </div>
 
                             <div>
                                 <p class="muted-color not-uppercase">Ваш платёж</p>
-                                <p>от 48 011 ₽/мес</p>
+                                <p>от 48 011 ₽/месяц</p>
                             </div>
 
                             <div>
                                 <p class="not-uppercase">Ваш платёж после показа</p>
-                                <p>от 46 600 ₽/мес<span class="sale">-370 000 ₽</span></p>
+                                <p>от 46 600 ₽/месяц<span class="sale">-370 000 ₽</span></p>
                             </div>
 
                             <div>
                                 <p class="not-uppercase">Ваш платёж после брони</p>
-                                <p>от 43 378 ₽/мес<span class="sale">-480 000 ₽</span></p>
+                                <p>от 43 378 ₽/месяц<span class="sale">-480 000 ₽</span></p>
                             </div>
 
                         </div>
 
                         <div class="buttons">
-                            <button type="submit" class="button button_full-width">записаться на показ</button>
-                            <button type="submit" class="button button_full-width">онлайн показ</button>
-                            <button type="submit" class="button button_white button_full-width">Забронировать</button>
+                            <button type="submit" class="user-button">записаться на показ</button>
+                            <button type="submit" class="user-button">онлайн показ</button>
+                            <button type="submit" class="user-button user-button_white">Забронировать</button>
                         </div>
 
                     </div>
 
-                    <div class="flat">
+                    <div class="main-grid__item">
 
-                        <div class="flat__header">
-                            <div class="flat__top">
+                        <div class="main-grid__img ">
+                            <div class="main-grid__header">
 
-                                <div class="flat__data"><img src="./assets/images/eye.png" alt="eye">
+                                <div class="main-grid__data"><img src="./assets/images/eye.png" alt="eye">
                                     <span>20.04.2020</span></div>
 
                                 <div class="icons">
                                     <a href="#"><i class="icon-article icon_big uk-position-relative"></i></a>
-                                    <a href="#"><i class="icon-trash-empty icon_big uk-position-relative"></i></a>
+                                    <a href="#"><i class="icon-heart-empty icon_big uk-position-relative"></i></a>
                                 </div>
 
                             </div>
 
-                            <div class="flat__img" uk-lightbox>
+                            <div class="main-grid__flat" uk-lightbox>
                                 <a class="uk-inline" href="./assets/images/FlatImage.png" data-caption="Квартира">
                                     <img src="./assets/images/FlatImage.png" alt="Квартира">
                                 </a>
@@ -451,11 +437,13 @@
 
                         </div>
 
-                        <div class="flat__info flat__info_underlined">
+                        <div class="main-grid__info main-grid__info_underlined">
 
                             <div>
-                                <p class="muted-color font-size-small block-static-height">ЖК республика, ГП-3,
-                                    срок сдачи: IV кв. 2020</p>
+                                <div class="block-static-height">
+                                    <p class="muted-color font-size-small">ЖК республика, ГП-3,
+                                        срок сдачи: IV кв. 2020</p>
+                                </div>
                                 <p>Двухкомнатная<span class="muted-color">53,3 м²</span></p>
                                 <p class="muted-color font-size-small">артикул 999999</p>
                             </div>
@@ -473,61 +461,59 @@
 
                         </div>
 
-                        <div class="flat__info flat__info-margin-bottom-big">
+                        <div class="main-grid__info main-grid__info-margin-bottom-big">
 
                             <div>
-                                <p class="muted-color font-size-small month-payment">Ежемесячные платежи<i
-                                        class="icon-question-circle-o icon_big uk-position-relative"
-                                        uk-tooltip="title: Дополнительная сумма, которая прибавится к первоначальному взносу.; pos: bottom; delay: 500"></i>
-                                </p>
+                                <p class="muted-color font-size-small month-payment">Ежемесячные платежи <a href="#"><i
+                                        class="icon-question-circle-o icon_big uk-position-relative" uk-tooltip="title: Дополнительная сумма, которая прибавится к первоначальному взносу.; pos: bottom; delay: 500"></i></a></p>
                             </div>
 
                             <div>
                                 <p class="muted-color not-uppercase">Базовый рассчёт</p>
-                                <p class="muted-color">от 50 665 ₽/мес</p>
+                                <p class="muted-color">от 50 665 ₽/месяц</p>
                             </div>
 
                             <div>
                                 <p class="muted-color not-uppercase">Ваш платёж</p>
-                                <p>от 48 011 ₽/мес</p>
+                                <p>от 48 011 ₽/месяц</p>
                             </div>
 
                             <div>
                                 <p class="not-uppercase">Ваш платёж после показа</p>
-                                <p>от 46 600 ₽/мес<span class="sale">-370 000 ₽</span></p>
+                                <p>от 46 600 ₽/месяц<span class="sale">-370 000 ₽</span></p>
                             </div>
 
                             <div>
                                 <p class="not-uppercase">Ваш платёж после брони</p>
-                                <p>от 43 378 ₽/мес<span class="sale">-480 000 ₽</span></p>
+                                <p>от 43 378 ₽/месяц<span class="sale">-480 000 ₽</span></p>
                             </div>
 
                         </div>
 
                         <div class="buttons">
-                            <button type="submit" class="button button_full-width">записаться на показ</button>
-                            <button type="submit" class="button button_full-width">онлайн показ</button>
-                            <button type="submit" class="button button_white button_full-width">Забронировать</button>
+                            <button type="submit" class="user-button">записаться на показ</button>
+                            <button type="submit" class="user-button">онлайн показ</button>
+                            <button type="submit" class="user-button user-button_white">Забронировать</button>
                         </div>
 
                     </div>
 
-                    <div class="flat">
+                    <div class="main-grid__item">
 
-                        <div class="flat__header">
-                            <div class="flat__top">
+                        <div class="main-grid__img ">
+                            <div class="main-grid__header">
 
-                                <div class="flat__data"><img src="./assets/images/eye.png" alt="eye">
+                                <div class="main-grid__data"><img src="./assets/images/eye.png" alt="eye">
                                     <span>20.04.2020</span></div>
 
                                 <div class="icons">
                                     <a href="#"><i class="icon-article icon_big uk-position-relative"></i></a>
-                                    <a href="#"><i class="icon-trash-empty icon_big uk-position-relative"></i></a>
+                                    <a href="#"><i class="icon-heart-empty icon_big uk-position-relative"></i></a>
                                 </div>
 
                             </div>
 
-                            <div class="flat__img" uk-lightbox>
+                            <div class="main-grid__flat" uk-lightbox>
                                 <a class="uk-inline" href="./assets/images/FlatImage(1).png" data-caption="Квартира">
                                     <img src="./assets/images/FlatImage(1).png" alt="Квартира">
                                 </a>
@@ -535,13 +521,14 @@
 
                         </div>
 
-                        <div class="flat__info flat__info_underlined">
+                        <div class="main-grid__info main-grid__info_underlined">
 
                             <div>
-                                <p class="muted-color p-40-height font-size-small block-static-height">ЖК республика,
-                                    ГП-3, срок сдачи:
-                                    IV
-                                    кв.</p>
+                                <div class="block-static-height">
+                                    <p class="muted-color p-40-height font-size-small">ЖК республика, ГП-3, срок сдачи:
+                                        IV
+                                        кв.</p>
+                                </div>
                                 <p>Двухкомнатная<span class="muted-color">53,3 м²</span></p>
                                 <p class="muted-color font-size-small">артикул 999999</p>
                             </div>
@@ -559,61 +546,59 @@
 
                         </div>
 
-                        <div class="flat__info flat__info-margin-bottom-big">
+                        <div class="main-grid__info main-grid__info-margin-bottom-big">
 
                             <div>
-                                <p class="muted-color font-size-small month-payment">Ежемесячные платежи<i
-                                        class="icon-question-circle-o icon_big uk-position-relative"
-                                        uk-tooltip="title: Дополнительная сумма, которая прибавится к первоначальному взносу.; pos: bottom; delay: 500"></i>
-                                </p>
+                                <p class="muted-color font-size-small month-payment">Ежемесячные платежи <a href="#"><i
+                                        class="icon-question-circle-o icon_big uk-position-relative" uk-tooltip="title: Дополнительная сумма, которая прибавится к первоначальному взносу.; pos: bottom; delay: 500"></i></a></p>
                             </div>
 
                             <div>
                                 <p class="muted-color not-uppercase">Базовый рассчёт</p>
-                                <p class="muted-color">от 50 665 ₽/мес</p>
+                                <p class="muted-color">от 50 665 ₽/месяц</p>
                             </div>
 
                             <div>
                                 <p class="muted-color not-uppercase">Ваш платёж</p>
-                                <p>от 48 011 ₽/мес</p>
+                                <p>от 48 011 ₽/месяц</p>
                             </div>
 
                             <div>
                                 <p class="not-uppercase">Ваш платёж после показа</p>
-                                <p>от 46 600 ₽/мес<span class="sale">-370 000 ₽</span></p>
+                                <p>от 46 600 ₽/месяц<span class="sale">-370 000 ₽</span></p>
                             </div>
 
                             <div>
                                 <p class="not-uppercase">Ваш платёж после брони</p>
-                                <p>от 43 378 ₽/мес<span class="sale">-480 000 ₽</span></p>
+                                <p>от 43 378 ₽/месяц<span class="sale">-480 000 ₽</span></p>
                             </div>
 
                         </div>
 
                         <div class="buttons">
-                            <button type="submit" class="button button_full-width">записаться на показ</button>
-                            <button type="submit" class="button button_full-width">онлайн показ</button>
-                            <button type="submit" class="button button_white button_full-width">Забронировать</button>
+                            <button type="submit" class="user-button">записаться на показ</button>
+                            <button type="submit" class="user-button">онлайн показ</button>
+                            <button type="submit" class="user-button user-button_white">Забронировать</button>
                         </div>
 
                     </div>
 
-                    <div class="flat">
+                    <div class="main-grid__item">
 
-                        <div class="flat__header">
-                            <div class="flat__top">
+                        <div class="main-grid__img ">
+                            <div class="main-grid__header">
 
-                                <div class="flat__data"><img src="./assets/images/eye.png" alt="eye">
+                                <div class="main-grid__data"><img src="./assets/images/eye.png" alt="eye">
                                     <span>20.04.2020</span></div>
 
                                 <div class="icons">
                                     <a href="#"><i class="icon-article icon_big uk-position-relative"></i></a>
-                                    <a href="#"><i class="icon-trash-empty icon_big uk-position-relative"></i></a>
+                                    <a href="#"><i class="icon-heart-empty icon_big uk-position-relative"></i></a>
                                 </div>
 
                             </div>
 
-                            <div class="flat__img" uk-lightbox>
+                            <div class="main-grid__flat" uk-lightbox>
                                 <a class="uk-inline" href="./assets/images/FlatImage.png" data-caption="Квартира">
                                     <img src="./assets/images/FlatImage.png" alt="Квартира">
                                 </a>
@@ -621,11 +606,13 @@
 
                         </div>
 
-                        <div class="flat__info flat__info_underlined">
+                        <div class="main-grid__info main-grid__info_underlined">
 
                             <div>
-                                <p class="muted-color font-size-small block-static-height">ЖК республика, ГП-3,
-                                    срок сдачи: IV кв. 2020</p>
+                                <div class="block-static-height">
+                                    <p class="muted-color font-size-small">ЖК республика, ГП-3,
+                                        срок сдачи: IV кв. 2020</p>
+                                </div>
                                 <p>Двухкомнатная<span class="muted-color">53,3 м²</span></p>
                                 <p class="muted-color font-size-small">артикул 999999</p>
                             </div>
@@ -643,41 +630,39 @@
 
                         </div>
 
-                        <div class="flat__info flat__info-margin-bottom-big">
+                        <div class="main-grid__info main-grid__info-margin-bottom-big">
 
                             <div>
-                                <p class="muted-color font-size-small month-payment">Ежемесячные платежи<i
-                                        class="icon-question-circle-o icon_big uk-position-relative"
-                                        uk-tooltip="title: Дополнительная сумма, которая прибавится к первоначальному взносу.; pos: bottom; delay: 500"></i>
-                                </p>
+                                <p class="muted-color font-size-small month-payment">Ежемесячные платежи <a href="#"><i
+                                        class="icon-question-circle-o icon_big uk-position-relative" uk-tooltip="title: Дополнительная сумма, которая прибавится к первоначальному взносу.; pos: bottom; delay: 500"></i></a></p>
                             </div>
 
                             <div>
                                 <p class="muted-color not-uppercase">Базовый рассчёт</p>
-                                <p class="muted-color">от 50 665 ₽/мес</p>
+                                <p class="muted-color">от 50 665 ₽/месяц</p>
                             </div>
 
                             <div>
                                 <p class="muted-color not-uppercase">Ваш платёж</p>
-                                <p>от 48 011 ₽/мес</p>
+                                <p>от 48 011 ₽/месяц</p>
                             </div>
 
                             <div>
                                 <p class="not-uppercase">Ваш платёж после показа</p>
-                                <p>от 46 600 ₽/мес<span class="sale">-370 000 ₽</span></p>
+                                <p>от 46 600 ₽/месяц<span class="sale">-370 000 ₽</span></p>
                             </div>
 
                             <div>
                                 <p class="not-uppercase">Ваш платёж после брони</p>
-                                <p>от 43 378 ₽/мес<span class="sale">-480 000 ₽</span></p>
+                                <p>от 43 378 ₽/месяц<span class="sale">-480 000 ₽</span></p>
                             </div>
 
                         </div>
 
                         <div class="buttons">
-                            <button type="submit" class="button button_full-width">записаться на показ</button>
-                            <button type="submit" class="button button_full-width">онлайн показ</button>
-                            <button type="submit" class="button button_white button_full-width">Забронировать</button>
+                            <button type="submit" class="user-button">записаться на показ</button>
+                            <button type="submit" class="user-button">онлайн показ</button>
+                            <button type="submit" class="user-button user-button_white">Забронировать</button>
                         </div>
 
                     </div>
@@ -689,10 +674,10 @@
         </div>
 
     </section>
-
+</main>
 
 <footer class="footer">
-    <div class="consultation__wrap">
+    <div class="consultation__wrap uk-hidden">
         <div class="uk-container mobile-no-padding">
             <div class="consultation">
                 <div class="consultation__img">
@@ -703,7 +688,7 @@
                         Консультация<br>кредитного брокера
                     </h2>
                     <p>Услуга бесплатная</p>
-                    <button class="button button_mob-small">Получить<span class="uk-visible@s"> консультацию</span></button>
+                    <button class="consultation__btn">Получить</button>
                 </div>
             </div>
         </div>
