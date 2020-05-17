@@ -1,4 +1,4 @@
-p, div, a, section, article {
+p, div, a, section, article, form, header, footer {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -9,8 +9,31 @@ a, a:hover, a:focus {
   text-decoration: none;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button:hover,
+input::-webkit-inner-spin-button:hover,
+input::-webkit-outer-spin-button:focus,
+input::-webkit-inner-spin-button:focus {
+  -webkit-appearance: none;
+}
+
+input[type='number'],
+input[type='number']:hover,
+input[type='number']:focus{
+  -moz-appearance: textfield;
+}
+
 .lh-inherit {
   line-height: inherit !important;
+}
+
+.padding-right {
+  padding-right: 30px;
+}
+
+.overflow-initial {
+  overflow: initial;
 }
 
 .mobile-no-padding {
@@ -33,6 +56,7 @@ body {
 .manager {
   line-height: 24px;
   min-width: 280px;
+  margin-bottom: 60px;
 
   &_mob {
     display: flex;
@@ -205,14 +229,6 @@ body {
     }
   }
 
-  &__btn {
-    background: @dom-red-color;
-    color: #fff;
-    font-size: 14px;
-    line-height: 30px;
-    padding: 10px 40px;
-  }
-
   &__img {
     display: flex;
     background: #E0483B;
@@ -236,7 +252,7 @@ body {
 
 .bottom {
   display: flex;
-  min-height: 70px;
+  min-height: 69px;
   align-items: center;
   color: @dom-grey-text;
   text-transform: uppercase;
@@ -251,6 +267,9 @@ body {
 
   &__wrap {
     border-top: 1px solid rgba(0, 0, 0, 0.1);
+    & > * {
+      height: 100%;
+    }
   }
 
   & span {
@@ -265,6 +284,10 @@ body {
     @media (max-width: @breakpoint-small) {
       margin: 0;
     }
+  }
+  &_menu {
+    align-items: flex-start;
+    padding: 0 0 20px 15px;
   }
 }
 
@@ -317,4 +340,40 @@ body {
     }
   }
 }
+.range {
+  margin-bottom: 30px;
 
+  &__interval {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 10px;
+  }
+}
+
+.checkboxes {
+  display: flex;
+  flex-direction: column;
+
+  &__item {
+    display: flex;
+    margin-bottom: 40px;
+  }
+}
+.extra-cash {
+  color: @dom-grey-text;
+  display: flex;
+  align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  width: 100%;
+
+  &__input {
+    width: 260px;
+    background: inherit;
+
+    &:focus {
+      background: inherit;
+    }
+  }
+}
