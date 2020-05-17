@@ -4,11 +4,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Index</title>
-
+    <title>login</title>
     <script src="../tests/js/test.js"></script>
-
-
+    <script src="../dist/js/script.js"></script>
 </head>
 
 
@@ -24,7 +22,7 @@
                         <img src="./assets/images/logo.png" alt="Логотип">
                     </a>
                 </div>
-                <ul class="uk-navbar-nav uk-visible@s">
+                <ul class="uk-navbar-nav uk-visible@s uk-hidden">
                     <li>
                         <a href="#">Квартиры <span uk-icon="icon: triangle-down" class="lh-inherit"></span></a>
                         <div uk-dropdown>
@@ -180,25 +178,25 @@
 </main>
 
 <footer class="footer">
-    <div class="consultation__wrap uk-hidden">
-        <div class="uk-container mobile-no-padding">
-            <div class="consultation">
-                <div class="consultation__img">
-                    <img src="./assets/images/consultation.png">
-                </div>
-                <div class="consultation__body">
-                    <h2>
-                        Консультация<br>кредитного брокера
-                    </h2>
-                    <p>Услуга бесплатная</p>
-                    <button class="consultation__btn">Получить</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="bottom__wrap">
-        <div class="uk-container">
-            <div class="bottom">
+	<div class="consultation__wrap uk-hidden">
+		<div class="uk-container mobile-no-padding">
+			<div class="consultation">
+				<div class="consultation__img">
+					<img src="./assets/images/consultation.png">
+				</div>
+				<div class="consultation__body">
+					<h2>
+						Консультация<br>кредитного брокера
+					</h2>
+					<p>Услуга бесплатная</p>
+					<button class="button">Получить <span class="uk-visible@s">консультацию</span></button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="bottom__wrap">
+		<div class="uk-container">
+			<div class="bottom">
 				<span>
 					© 2020 ГК Дом
 				</span>
@@ -212,14 +210,5 @@
         </div>
     </div>
 </footer>
-
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-        document.getElementById('hamburger').onclick = function () {
-            document.getElementById('hamburger').classList.toggle('hamburger_closed');
-        }
-    })
-</script>
-
 </body>
 </html>
