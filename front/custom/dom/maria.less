@@ -1,6 +1,6 @@
 .content {
   background: url(../../pages/assets/images/main.png) no-repeat, linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.5) 100%);
-  height: calc(~"100vh - 130px");
+  min-height: calc(~"100vh - 130px");
   position: relative;
   background-blend-mode: darken;
   background-size: cover;
@@ -54,6 +54,10 @@
     padding-top: 45px;
   }
 
+  & > div:first-child {
+    margin-right: 30px;
+  }
+
   &__title {
     color: #fff;
     font-weight: 500;
@@ -79,7 +83,6 @@
     padding: 30px;
     display: flex;
     flex-direction: column;
-    margin-left: 10px;
     color: @global-color;
     font-size: 18px;
     width: 400px;
@@ -243,6 +246,9 @@
 
   &__header {
     margin-bottom: 25px;
+    @media (max-width: @breakpoint-medium) {
+      margin-bottom: 15px;
+    }
   }
 
   &__img {
@@ -254,6 +260,15 @@
   &__flat {
     text-align: center;
     height: 220px;
+
+    & > a {
+      height: inherit;
+      width: 250px;
+
+      & > img {
+        height: inherit;
+      }
+    }
   }
 
   &__info {
@@ -418,7 +433,6 @@
   width: 300px;
   margin-bottom: 5px;
   @media (max-width: @breakpoint-small) {
-    height: auto;
     width: auto;
   }
 }
@@ -431,7 +445,7 @@
   display: flex;
   align-items: center;
 
-  & > a {
+  & > i {
     margin-left: 5px;
   }
 }
