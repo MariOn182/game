@@ -1,6 +1,9 @@
 /web/bitrix/
 /web/upload/
 /front/node_modules/
+/front/dist/
+/front/package-lock.json
+/front/yarn.lock
 /.git/
 /.idea/
 .DS_Store

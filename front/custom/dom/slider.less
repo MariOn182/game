@@ -1,0 +1,29 @@
+//
+// Component: Slider
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+
+// Component
+// ========================================================================
+
+.hook-slider() {
+  & .uk-active .flat_slider {
+    opacity: 1;
+    transition: opacity 0.5s;
+    &:before {
+      display: none;
+      background: none;
+    }
+  }
+  @media (max-width: @breakpoint-small) {
+    position: relative;
+  }
+}
+
+.hook-slider-misc() {
+}
