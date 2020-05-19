@@ -424,6 +424,7 @@
   border: 3px solid @dom-red-color;
   width: fit-content;
   width: -moz-fit-content;
+  padding: 7px 36px;
 
   &:hover {
     background: #fff;
@@ -457,11 +458,12 @@
   }
 
 }
-.button_mob-small span{
+
+.button_mob-small span {
   margin-left: 5px;
 }
+
 .button, .send {
-  padding: 10px 40px;
   font-weight: bold;
   font-size: 14px;
   line-height: 30px;
@@ -521,10 +523,15 @@
 
 .send {
   color: @dom-red-color;
+  height: fit-content;
+  height: -moz-fit-content;
+  align-self: center;
 }
 
 .icons {
   transition: 0.5s;
+  display: flex;
+  align-items: center;
 
   & > a > i:hover {
     color: @dom-red-color;
@@ -588,6 +595,30 @@
     display: flex;
     align-items: center;
   }
+}
+
+.heart {
+  position: relative;
+
+  & > span {
+    top: -9px;
+    left: 14px;
+    z-index: 2;
+  }
+
+  & > svg > path {
+    stroke-width: 2px;
+
+    &:hover {
+      fill: @dom-red-color;
+      stroke: @dom-red-color !important;
+      z-index: 1;
+    }
+  }
+}
+
+.no-hover:hover {
+  color: #fff !important;
 }
 
 

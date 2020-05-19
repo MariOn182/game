@@ -184,9 +184,6 @@ body {
   @media (max-width: @breakpoint-medium) {
     box-shadow: none;
   }
-  @media (max-width: 340px) {
-    flex-direction: column;
-  }
 
   &__wrap {
     margin-top: 60px;
@@ -198,9 +195,6 @@ body {
       background: linear-gradient(to right, #E0483B 50%, #fff 50%);
       margin-bottom: 0;
     }
-    @media (max-width: 340px) {
-      margin: 20px 0 40px;
-    }
   }
 
   &__body {
@@ -210,10 +204,7 @@ body {
       padding: 20px 0;
     }
     @media (max-width: 340px) {
-      text-align: center;
-      & > button {
-        width: 100%;
-      }
+      margin-left: 10px;
     }
 
     & h2 {
@@ -228,6 +219,9 @@ body {
       @media (max-width: @breakpoint-small) {
         font-size: 20px;
         line-height: 24px;
+      }
+      @media (max-width: 340px) {
+        font-size: 18px;
       }
     }
 
@@ -248,10 +242,6 @@ body {
     display: flex;
     background: #E0483B;
     padding-left: 40px;
-
-    @media (max-width: 340px) {
-      justify-content: center;
-    }
 
     & img {
       height: 100%;
