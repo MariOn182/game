@@ -3578,6 +3578,11 @@ ul.uk-nav-sub {
   transform: rotate(45deg);
   background: #ffffff;
 }
+@media (max-width: 690px) {
+  .uk-tooltip:before {
+    display: none;
+  }
+}
 /* Show */
 .uk-tooltip.uk-active {
   display: block;
@@ -5545,11 +5550,6 @@ body {
     box-shadow: none;
   }
 }
-@media (max-width: 340px) {
-  .consultation {
-    flex-direction: column;
-  }
-}
 .consultation__wrap {
   margin-top: 60px;
   margin-bottom: 60px;
@@ -5565,11 +5565,6 @@ body {
     margin-bottom: 0;
   }
 }
-@media (max-width: 340px) {
-  .consultation__wrap {
-    margin: 20px 0 40px;
-  }
-}
 .consultation__body {
   padding: 50px 40px 40px;
   background: #fff;
@@ -5581,10 +5576,7 @@ body {
 }
 @media (max-width: 340px) {
   .consultation__body {
-    text-align: center;
-  }
-  .consultation__body > button {
-    width: 100%;
+    margin-left: 10px;
   }
 }
 .consultation__body h2 {
@@ -5603,6 +5595,11 @@ body {
   .consultation__body h2 {
     font-size: 20px;
     line-height: 24px;
+  }
+}
+@media (max-width: 340px) {
+  .consultation__body h2 {
+    font-size: 18px;
   }
 }
 .consultation__body p {
@@ -5625,11 +5622,6 @@ body {
   background: #E0483B;
   padding-left: 40px;
 }
-@media (max-width: 340px) {
-  .consultation__img {
-    justify-content: center;
-  }
-}
 .consultation__img img {
   height: 100%;
   max-height: initial;
@@ -5644,7 +5636,6 @@ body {
 @media (max-width: 690px) {
   .consultation__img img {
     max-height: 215px;
-    object-fit: cover;
   }
 }
 @media (max-width: 1024px) {
@@ -6203,19 +6194,13 @@ body {
 .button {
   background: #D91921;
   outline: none;
-  padding: 10px 40px;
   color: #fff;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 30px;
   text-align: center;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  transition: 0.5s;
   cursor: pointer;
   border: 3px solid #D91921;
   width: fit-content;
   width: -moz-fit-content;
+  padding: 7px 36px;
 }
 .button:hover {
   background: #fff;
@@ -6249,7 +6234,6 @@ body {
 }
 .button,
 .send {
-  padding: 10px 40px;
   font-weight: bold;
   font-size: 14px;
   line-height: 30px;
@@ -6306,9 +6290,14 @@ body {
 }
 .send {
   color: #D91921;
+  height: fit-content;
+  height: -moz-fit-content;
+  align-self: center;
 }
 .icons {
   transition: 0.5s;
+  display: flex;
+  align-items: center;
 }
 .icons > a > i:hover {
   color: #D91921;
@@ -6362,4 +6351,23 @@ body {
     display: flex;
     align-items: center;
   }
+}
+.heart {
+  position: relative;
+}
+.heart > span {
+  top: -9px;
+  left: 14px;
+  z-index: 2;
+}
+.heart > svg > path {
+  stroke-width: 2px;
+}
+.heart > svg > path:hover {
+  fill: #D91921;
+  stroke: #D91921 !important;
+  z-index: 1;
+}
+.no-hover:hover {
+  color: #fff !important;
 }
