@@ -20,7 +20,7 @@ input::-webkit-inner-spin-button:focus {
 
 input[type='number'],
 input[type='number']:hover,
-input[type='number']:focus{
+input[type='number']:focus {
   -moz-appearance: textfield;
 }
 
@@ -184,6 +184,9 @@ body {
   @media (max-width: @breakpoint-medium) {
     box-shadow: none;
   }
+  @media (max-width: 340px) {
+    flex-direction: column;
+  }
 
   &__wrap {
     margin-top: 60px;
@@ -195,6 +198,9 @@ body {
       background: linear-gradient(to right, #E0483B 50%, #fff 50%);
       margin-bottom: 0;
     }
+    @media (max-width: 340px) {
+      margin: 20px 0 40px;
+    }
   }
 
   &__body {
@@ -202,6 +208,12 @@ body {
     background: #fff;
     @media (max-width: @breakpoint-medium) {
       padding: 20px 0;
+    }
+    @media (max-width: 340px) {
+      text-align: center;
+      & > button {
+        width: 100%;
+      }
     }
 
     & h2 {
@@ -237,12 +249,22 @@ body {
     background: #E0483B;
     padding-left: 40px;
 
+    @media (max-width: 340px) {
+      justify-content: center;
+    }
+
     & img {
       height: 100%;
       max-height: initial;
+      object-fit: cover;
+      width: 320px;
+
+      @media (max-width: @breakpoint-medium) {
+        width: auto;
+      }
       @media (max-width: @breakpoint-small) {
         max-height: 215px;
-        object-fit: cover;
+
       }
     }
 
@@ -270,6 +292,7 @@ body {
 
   &__wrap {
     border-top: 1px solid rgba(0, 0, 0, 0.1);
+
     & > * {
       height: 100%;
     }
@@ -288,6 +311,7 @@ body {
       margin: 0;
     }
   }
+
   &_menu {
     align-items: flex-start;
     padding: 0 0 20px 15px;
@@ -343,6 +367,7 @@ body {
     }
   }
 }
+
 .range {
   margin-bottom: 30px;
 
@@ -363,6 +388,7 @@ body {
     margin-bottom: 40px;
   }
 }
+
 .extra-cash {
   color: @dom-grey-text;
   display: flex;
@@ -380,6 +406,7 @@ body {
     }
   }
 }
+
 .slider-through {
   text-transform: uppercase;
   font-size: 12px;
@@ -393,6 +420,7 @@ body {
     z-index: 1;
     overflow: hidden;
     left: -15px;
+
     &:before, &:after {
       content: '';
       display: inline-block;
@@ -403,24 +431,30 @@ body {
       position: relative;
       vertical-align: middle;
     }
+
     &:before {
       right: 15px;
       margin: 0 0 0 -100%;
     }
+
     &:after {
       left: 15px;
       margin: 0 -100% 0 0;
     }
   }
+
   &__min {
     top: 280px;
   }
+
   &__standart {
     top: 370px;
   }
+
   &__after-show {
     top: 430px;
   }
+
   &__after-reserve {
     top: 510px;
   }

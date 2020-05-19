@@ -5545,6 +5545,11 @@ body {
     box-shadow: none;
   }
 }
+@media (max-width: 340px) {
+  .consultation {
+    flex-direction: column;
+  }
+}
 .consultation__wrap {
   margin-top: 60px;
   margin-bottom: 60px;
@@ -5560,6 +5565,11 @@ body {
     margin-bottom: 0;
   }
 }
+@media (max-width: 340px) {
+  .consultation__wrap {
+    margin: 20px 0 40px;
+  }
+}
 .consultation__body {
   padding: 50px 40px 40px;
   background: #fff;
@@ -5567,6 +5577,14 @@ body {
 @media (max-width: 1024px) {
   .consultation__body {
     padding: 20px 0;
+  }
+}
+@media (max-width: 340px) {
+  .consultation__body {
+    text-align: center;
+  }
+  .consultation__body > button {
+    width: 100%;
   }
 }
 .consultation__body h2 {
@@ -5607,9 +5625,21 @@ body {
   background: #E0483B;
   padding-left: 40px;
 }
+@media (max-width: 340px) {
+  .consultation__img {
+    justify-content: center;
+  }
+}
 .consultation__img img {
   height: 100%;
   max-height: initial;
+  object-fit: cover;
+  width: 320px;
+}
+@media (max-width: 1024px) {
+  .consultation__img img {
+    width: auto;
+  }
 }
 @media (max-width: 690px) {
   .consultation__img img {
@@ -5901,6 +5931,7 @@ body {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   outline: none;
   width: 270px;
+  box-shadow: none;
 }
 .main__form > input::placeholder {
   color: #999;
@@ -6184,6 +6215,7 @@ body {
   cursor: pointer;
   border: 3px solid #D91921;
   width: fit-content;
+  width: -moz-fit-content;
 }
 .button:hover {
   background: #fff;
@@ -6194,7 +6226,7 @@ body {
     width: 100%;
   }
   .button_mob-small {
-    padding: 10px 20px;
+    padding: 10px 20px !important;
     width: auto;
   }
 }
@@ -6209,6 +6241,29 @@ body {
 .button_full-width {
   width: 100%;
 }
+.button_full-height {
+  height: 100%;
+}
+.button_mob-small span {
+  margin-left: 5px;
+}
+.button,
+.send {
+  padding: 10px 40px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 30px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+.button,
+.send,
+.notification {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .buttons {
   display: flex;
   flex-direction: column;
@@ -6219,9 +6274,12 @@ body {
 .buttons_row {
   flex-direction: row;
   width: 65%;
+  height: 50px;
 }
 .buttons_row > button {
   height: fit-content;
+  height: -moz-fit-content;
+  width: 50%;
 }
 .buttons_row > button:first-child {
   margin-right: 20px;
@@ -6239,7 +6297,15 @@ body {
 @media (max-width: 690px) {
   .buttons_row {
     flex-direction: column;
+    height: auto;
   }
+  .buttons_row > button,
+  .buttons_row .send {
+    width: 100% !important;
+  }
+}
+.send {
+  color: #D91921;
 }
 .icons {
   transition: 0.5s;
@@ -6282,6 +6348,7 @@ body {
   display: none;
   border-bottom: 1px solid #999;
   width: fit-content;
+  width: -moz-fit-content;
   font-weight: bold;
   letter-spacing: 0.7px;
   height: 15px;
