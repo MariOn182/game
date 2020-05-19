@@ -112,6 +112,7 @@
       border-bottom: 1px solid rgba(0, 0, 0, 0.1);
       outline: none;
       width: 270px;
+      box-shadow: none;
 
       &::placeholder {
         color: @dom-grey-text;
@@ -417,18 +418,12 @@
 .button {
   background: @dom-red-color;
   outline: none;
-  padding: 10px 40px;
   color: #fff;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 30px;
   text-align: center;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  transition: 0.5s;
   cursor: pointer;
   border: 3px solid @dom-red-color;
   width: fit-content;
+  width: -moz-fit-content;
 
   &:hover {
     background: #fff;
@@ -438,7 +433,7 @@
   @media (max-width: @breakpoint-small) {
     width: 100%;
     &_mob-small {
-      padding: 10px 20px;
+      padding: 10px 20px !important;
       width: auto;
     }
   }
@@ -457,6 +452,28 @@
     width: 100%;
   }
 
+  &_full-height {
+    height: 100%;
+  }
+
+}
+.button_mob-small span{
+  margin-left: 5px;
+}
+.button, .send {
+  padding: 10px 40px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 30px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+
+.button, .send, .notification {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .buttons {
@@ -473,9 +490,12 @@
   &_row {
     flex-direction: row;
     width: 65%;
+    height: 50px;
 
     & > button {
       height: fit-content;
+      height: -moz-fit-content;
+      width: 50%;
 
       &:first-child {
         margin-right: 20px;
@@ -491,8 +511,16 @@
     }
     @media (max-width: @breakpoint-small) {
       flex-direction: column;
+      height: auto;
+      & > button, .send {
+        width: 100% !important;
+      }
     }
   }
+}
+
+.send {
+  color: @dom-red-color;
 }
 
 .icons {
@@ -547,6 +575,7 @@
   display: none;
   border-bottom: 1px solid @dom-grey-text;
   width: fit-content;
+  width: -moz-fit-content;
   font-weight: bold;
   letter-spacing: 0.7px;
   height: 15px;
@@ -560,5 +589,7 @@
     align-items: center;
   }
 }
+
+
 
 
