@@ -5404,10 +5404,6 @@ a:focus {
   color: inherit;
   text-decoration: none;
 }
-a:hover,
-a:focus {
-  opacity: 0.5;
-}
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button,
 input::-webkit-outer-spin-button:hover,
@@ -5479,6 +5475,7 @@ body {
 }
 .icon_big {
   font-size: 21px;
+  -webkit-text-stroke-width: 0.3px;
 }
 .icon-number {
   position: absolute;
@@ -5537,11 +5534,11 @@ body {
   top: 8px;
 }
 .hamburger_closed > span:before {
-  transform: rotate(-95deg);
+  transform: rotate(-90deg);
   top: 0;
 }
 .hamburger_closed > span:after {
-  transform: rotate(-95deg);
+  transform: rotate(-90deg);
   top: 1px;
   left: 5px;
 }
@@ -6136,7 +6133,6 @@ body {
   }
   .flat_slider .sale {
     display: block;
-    color: #D91921;
     font-size: 12px;
     margin-left: 0;
   }
@@ -6221,6 +6217,11 @@ body {
   .button_mob-small {
     padding: 10px 20px !important;
     width: auto;
+  }
+}
+@media (max-width: 690px) and (max-width: 320px) {
+  .button_mob-small {
+    padding: 10px 15px!important;
   }
 }
 .button_white {
@@ -6374,6 +6375,11 @@ body {
 .heart > svg > path:hover {
   fill: #D91921;
   stroke: #D91921 !important;
+  z-index: 1;
+}
+.heart_header > svg > path:hover {
+  fill: none;
+  stroke: #fff !important;
   z-index: 1;
 }
 .no-hover:hover {
