@@ -3119,7 +3119,7 @@ ul.uk-nav-sub {
   /* 6 */
   opacity: 0;
   transition: opacity 0.15s linear;
-  background: rgba(0, 0, 0, 0.35) !important;
+  background: rgba(0, 0, 0, 0.8) !important;
 }
 .uk-lightbox .uk-lightbox-caption {
   text-align: center !important;
@@ -5404,6 +5404,10 @@ a:focus {
   color: inherit;
   text-decoration: none;
 }
+a:hover,
+a:focus {
+  opacity: 0.5;
+}
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button,
 input::-webkit-outer-spin-button:hover,
@@ -5469,6 +5473,9 @@ body {
 }
 .manager__img img {
   height: 100%;
+}
+.manager__text > p > a {
+  word-break: break-all;
 }
 .icon_big {
   font-size: 21px;
@@ -5756,8 +5763,9 @@ body {
   width: 100%;
 }
 .extra-cash__input {
-  width: 260px;
+  width: 250px;
   background: inherit;
+  padding: 0;
 }
 .extra-cash__input:focus {
   background: inherit;
