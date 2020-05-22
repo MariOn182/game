@@ -328,7 +328,6 @@
 
       & .sale {
         display: block;
-        color: @dom-red-color;
         font-size: 12px;
         margin-left: 0;
       }
@@ -436,6 +435,9 @@
     &_mob-small {
       padding: 10px 20px !important;
       width: auto;
+      @media(max-width: 320px){
+      padding: 10px 15px!important;
+      }
     }
   }
 
@@ -612,6 +614,14 @@
     &:hover {
       fill: @dom-red-color;
       stroke: @dom-red-color !important;
+      z-index: 1;
+    }
+  }
+
+  &_header {
+    & > svg > path:hover {
+      fill: none;
+      stroke: #fff !important;
       z-index: 1;
     }
   }
