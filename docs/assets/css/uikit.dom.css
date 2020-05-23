@@ -5734,6 +5734,10 @@ body {
 .mobile-menu__links li {
   list-style: none;
 }
+.mobile-menu__links li > a:hover,
+.mobile-menu__links li > a:focus {
+  color: #8b9196;
+}
 .range {
   margin-bottom: 30px;
 }
@@ -5848,6 +5852,9 @@ body {
 .content_no-image-full-height {
   height: calc(100vh - 185px);
   background: #F5F5F5;
+}
+.content_calc {
+  min-height: 100vh;
 }
 .main,
 .flat__top {
@@ -6221,7 +6228,7 @@ body {
 }
 @media (max-width: 690px) and (max-width: 320px) {
   .button_mob-small {
-    padding: 10px 15px!important;
+    padding: 10px 15px !important;
   }
 }
 .button_white {
@@ -6262,6 +6269,9 @@ body {
   flex-direction: column;
 }
 .buttons > button:not(:last-child) {
+  margin-bottom: 20px;
+}
+.buttons > div {
   margin-bottom: 20px;
 }
 .buttons_row {

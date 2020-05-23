@@ -35,6 +35,10 @@
     background: #F5F5F5;
 
   }
+
+  &_calc{
+    min-height: 100vh;
+  }
 }
 
 
@@ -435,8 +439,8 @@
     &_mob-small {
       padding: 10px 20px !important;
       width: auto;
-      @media(max-width: 320px){
-      padding: 10px 15px!important;
+      @media (max-width: 320px) {
+        padding: 10px 15px !important;
       }
     }
   }
@@ -489,6 +493,10 @@
     &:not(:last-child) {
       margin-bottom: 20px;
     }
+  }
+
+  & > div {
+    margin-bottom: 20px;
   }
 
   &_row {
