@@ -5820,7 +5820,6 @@ body {
   background: url(../images/main.png) no-repeat, linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.5) 100%);
   min-height: calc(100vh - 130px);
   position: relative;
-  background-blend-mode: darken;
   background-size: cover;
   padding-bottom: 55px;
 }
@@ -5855,6 +5854,15 @@ body {
 }
 .content_calc {
   min-height: 100vh;
+}
+.content_dark:before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.5) 100%);
+  background-blend-mode: unset;
+  z-index: 1;
 }
 .main,
 .flat__top {
@@ -5988,6 +5996,9 @@ body {
   .main_small-padding > h1 {
     margin: 0 0 20px;
   }
+}
+.main > div {
+  z-index: 2;
 }
 .main__header {
   background: #fff;
