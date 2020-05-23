@@ -5458,7 +5458,7 @@ body {
   overflow: hidden;
 }
 .manager__img_mob {
-  width: 90px;
+  min-width: 90px;
   height: 90px;
   margin-right: 15px;
 }
