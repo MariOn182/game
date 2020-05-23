@@ -3572,16 +3572,11 @@ ul.uk-nav-sub {
   content: " ";
   width: 20px;
   height: 20px;
-  left: calc(30% - 1px);
+  right: 17%;
   top: -10px;
   box-shadow: 1px 1px -1px rgba(0, 0, 0, 0.2);
   transform: rotate(45deg);
   background: #ffffff;
-}
-@media (max-width: 690px) {
-  .uk-tooltip:before {
-    display: none;
-  }
 }
 /* Show */
 .uk-tooltip.uk-active {
@@ -5863,6 +5858,11 @@ body {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.5) 100%);
   background-blend-mode: unset;
   z-index: 1;
+}
+@media (max-width: 690px) {
+  .content_dark:before {
+    display: none;
+  }
 }
 .main,
 .flat__top {
