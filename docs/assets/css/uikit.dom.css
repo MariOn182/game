@@ -5732,7 +5732,7 @@ body {
 }
 .mobile-menu__links li > a:hover,
 .mobile-menu__links li > a:focus {
-  color: #8b9196;
+  opacity: 0.5;
 }
 .range {
   margin-bottom: 30px;
@@ -6257,6 +6257,7 @@ body {
 }
 .button_full-width {
   width: 100%;
+  padding: 7px 0;
 }
 .button_full-height {
   height: 100%;
@@ -6289,6 +6290,9 @@ body {
 }
 .buttons > div {
   margin-bottom: 20px;
+}
+.buttons > div > button > a {
+  width: 100%;
 }
 .buttons_row {
   flex-direction: row;
