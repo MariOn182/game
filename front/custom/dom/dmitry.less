@@ -55,6 +55,7 @@ body {
 .header {
   height: 60px;
   background: #383838;
+  z-index: 100;
 }
 
 .manager {
@@ -397,15 +398,12 @@ body {
   color: @dom-grey-text;
   display: flex;
   align-items: center;
-  padding-bottom: 10px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  width: 100%;
 
   &__input {
     width: 250px;
     background: inherit;
     padding: 0;
-
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     &:focus {
       background: inherit;
     }

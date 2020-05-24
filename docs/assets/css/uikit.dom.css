@@ -2581,7 +2581,7 @@ ul.uk-nav-sub {
 }
 /* OnClick */
 .uk-navbar-nav > li > a:active {
-  color: #333;
+  color: #999;
 }
 /* Active */
 .uk-navbar-nav > li.uk-active > a {
@@ -5439,6 +5439,7 @@ body {
 .header {
   height: 60px;
   background: #383838;
+  z-index: 100;
 }
 .manager {
   line-height: 24px;
@@ -5754,14 +5755,12 @@ body {
   color: #999;
   display: flex;
   align-items: center;
-  padding-bottom: 10px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  width: 100%;
 }
 .extra-cash__input {
   width: 250px;
   background: inherit;
   padding: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 .extra-cash__input:focus {
   background: inherit;
@@ -6400,7 +6399,7 @@ body {
 }
 .heart_header > svg > path:hover {
   fill: none;
-  stroke: #fff !important;
+  stroke: #999 !important;
   z-index: 1;
 }
 .no-hover:hover {

@@ -84,7 +84,7 @@
 						</div>
 					</li>
 					<li>
-						<a href="#" class="no-hover"><span uk-icon="heart" class="heart heart_header"><span class="icon-number">19</span></span></a>
+						<a href="#" ><span uk-icon="heart" class="heart heart_header"><span class="icon-number">19</span></span></a>
 					</li>
 					<li>
 						<a href="#"><i class="icon-article icon_big uk-position-relative"><span class="icon-number icon-number_rotate">3</span></i></a>
@@ -100,61 +100,71 @@
 			</div>
 		</nav>
 	</div>
-	<div uk-offcanvas id="mobile-menu" class="uk-offcanvas mobile-menu">
-		<div class="uk-offcanvas-bar">
-			<nav uk-navbar>
-				<ul class="mobile-menu__nav">
-					<li>
-						<a href="#">Квартиры</a>
-						<ul class="mobile-menu__links">
-							<li>
-								<a href="#">Студии</a>
-							</li>
-							<li>
-								<a href="#">Однокомнатные</a>
-							</li>
-							<li>
-								<a href="#">Двухкомнатные</a>
-							</li>
-							<li>
-								<a href="#">Трехкомнатные</a>
-							</li>
-							<li>
-								<a href="#">Все</a>
-							</li>
-						</ul>
-					</li>
-					<li>
-						<a href="#">Начальный капитал</a>
-					</li>
-					<li>
-						<a href="#">Пункт меню</a>
-					</li>
-				</ul>
-			</nav>
-			<div class="manager manager_mob ">
-				<div class="manager__img manager__img_mob">
-					<img src="./assets/images/photo.png" alt="фото Вениамин Ротенбергер">
-				</div>
-				<div class="manager__text">
-					<p>
-						Ваш менеджер:
-					</p>
-					<p>
-						Вениамин Ротенбергер
-					</p>
-					<p>
-						<a href="tel:+7 (999) 999-99-99"><i class="icon-phone"></i> +7 (999) 999-99-99</a>
-					</p>
-					<p>
-						<a href="mailto:manager@72dom.com"><i class="icon-mail-alt"></i> manager@72dom.com</a>
-					</p>
-				</div>
+</header>
+<div uk-offcanvas id="mobile-menu" class="uk-offcanvas mobile-menu">
+	<div class="uk-offcanvas-bar">
+		<nav uk-navbar>
+			<ul class="mobile-menu__nav">
+				<li>
+					<a href="#">Квартиры</a>
+					<ul class="mobile-menu__links">
+						<li>
+							<a href="#">Студии</a>
+						</li>
+						<li>
+							<a href="#">Однокомнатные</a>
+						</li>
+						<li>
+							<a href="#">Двухкомнатные</a>
+						</li>
+						<li>
+							<a href="#">Трехкомнатные</a>
+						</li>
+						<li>
+							<a href="#">Все</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">Начальный капитал</a>
+				</li>
+				<li>
+					<a href="#">Пункт меню</a>
+				</li>
+			</ul>
+		</nav>
+		<div class="manager manager_mob ">
+			<div class="manager__img manager__img_mob">
+				<img src="./assets/images/photo.png" alt="фото Вениамин Ротенбергер">
+			</div>
+			<div class="manager__text">
+				<p>
+					Ваш менеджер:
+				</p>
+				<p>
+					Вениамин Ротенбергер
+				</p>
+				<p>
+					<a href="tel:+7 (999) 999-99-99"><i class="icon-phone"></i> +7 (999) 999-99-99</a>
+				</p>
+				<p>
+					<a href="mailto:manager@72dom.com"><i class="icon-mail-alt"></i> manager@72dom.com</a>
+				</p>
 			</div>
 		</div>
+		<div class="bottom bottom_menu">
+			<span>
+				© 2020 ГК Дом
+			</span>
+			<span>
+				Не является публичной офертой
+			</span>
+			<a href="#" class="bottom__link">
+				Политика конфиденциальности
+			</a>
+		</div>
 	</div>
-</header>
-
+</div>
 
 	<section class="content content_calc content_dark">
 
@@ -180,7 +190,7 @@
 						</div>
 						<div class="checkboxes">
 							<label class="checkboxes__item"><input class="uk-checkbox" name="mother-cap-first" value="466617" type="checkbox" checked>Мат. капитал за первого ребёнка +466 617 ₽</label>
-							<label class="checkboxes__item"><input class="uk-checkbox" name="mother-cap-region" value="150000" type="checkbox">Регинальный мат. капитал Тюменской области за первого ребёнка +150 000 ₽</label>
+							<label class="checkboxes__item"><input class="uk-checkbox" name="mother-cap-region" value="150000" type="checkbox">Региональный мат. капитал Тюменской области за первого ребёнка +150 000 ₽</label>
 							<label class="checkboxes__item"><input class="uk-checkbox" name="mother-cap-second" value="616617" type="checkbox">Мат. капитал за второго ребёнка +616 617 ₽</label>
 						</div>
 
@@ -240,11 +250,18 @@
         const rangeInput = document.querySelector('.range__input');
         const rangeValueText = document.querySelector('.range__value');
         const checkboxes = document.querySelectorAll('.checkboxes input');
+        const inputMotherCapSecond = document.querySelector('input[name=mother-cap-second]');
+        const inputMotherCapRegion = document.querySelector('input[name=mother-cap-region]');
         const extraCashInput = document.querySelector('.extra-cash__input');
         const calcForm = document.querySelector('form[name=calcForm]');
 
         rangeInput.addEventListener('input', () => {
             rangeValueText.innerHTML = parseInt(rangeInput.value).toLocaleString('ru-RU') + ' ₽';
+        });
+
+        inputMotherCapSecond.addEventListener('input', () => {
+            inputMotherCapRegion.checked = false;
+            inputMotherCapRegion.toggleAttribute('disabled');
         });
 
         calcForm.addEventListener('submit', (event) => {
@@ -254,11 +271,12 @@
 
         function getSum() {
             let sum = 0;
-            for (const item of checkboxes) {
+            checkboxes.forEach((item) => {
                 if (item.checked) {
                     sum += parseInt(item.value);
                 }
-            }
+            });
+
             sum += parseInt(rangeInput.value);
 
             if (!isNaN(parseInt(extraCashInput.value))) {
