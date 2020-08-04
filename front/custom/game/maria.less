@@ -1,3 +1,4 @@
+
 .wrap {
   padding: 100px;
 }
@@ -40,15 +41,19 @@
   display: block;
   margin-right: 20px;
 }
+
 .notice_warning {
   background: url("../../pages/assets/images/noticeWarning.png") no-repeat;
 }
+
 .notice_info {
   background: url("../../pages/assets/images/noticeInfo.png") no-repeat;
 }
+
 .notice_success {
   background: url("../../pages/assets/images/noticeSuccess.png") no-repeat;
 }
+
 .notice_error {
   background: url("../../pages/assets/images/noticeError.png") no-repeat;
 }
@@ -169,10 +174,6 @@
   transform: rotate(180deg);
   left: auto;
   right: 0;
-}
-
-.margin-bottom-30 {
-  margin-bottom: 30px;
 }
 
 .corner_default {
@@ -356,6 +357,34 @@
   margin-bottom: 5px !important;
 }
 
+.bar__wrap_xp-num {
+  width: 125px;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.bar__wrap_xp-num p {
+  font-size: 18px !important;
+}
+
+.bar__wrap_xp-num p:first-child {
+  font-size: 11px !important;
+  margin-top: 5px;
+}
+
+.bar__wrap_xp-num p:not(:last-child) {
+  margin-right: 5px;
+}
+
+.bar__wrap_xp-scale {
+  width: 740px;
+}
+
+.bar__wrap_xp-num, .bar__wrap_xp-scale {
+  border-radius: 5px;
+}
+
 .bar {
   background: #070707;
   width: 100%;
@@ -367,8 +396,13 @@
   border-radius: 5px;
 }
 
+
 .bar_inverse {
   margin: 0 45px 0 0 !important;
+}
+
+.bar_xp{
+  margin: 0!important;
 }
 
 
@@ -383,7 +417,7 @@
   margin-left: 20px;
 }
 
-.nickname, .class, .role {
+.nickname, .class, .role, .bar__wrap_xp-num p {
   margin: 0;
   padding: 0;
   font-size: 22px;
@@ -396,23 +430,44 @@
   margin-right: 10px;
 }
 
-.spells-bar{
+.spells-bar {
   display: grid;
   grid-template-columns: repeat(10, auto);
-  gap: 13px;
+  gap: 20px 13px;
   margin-left: auto;
+  width: 77%;
 }
 
-.spells-bar__item{
-  width: 75px;
-  height: 75px;
-  background: #000000;
-  border: 5px solid #212425;
+.spells-bar__wrap {
+  width: 78px;
+  height: 78px;
+  z-index: 2;
+  position: absolute;
+  background: #323638;
+  top: -4px;
+  left: -4px;
+}
+
+.spells-bar__item {
+  width: 70px;
+  height: 70px;
   box-sizing: border-box;
   position: relative;
+  z-index: 5;
 }
 
-.spell-number{
+.spells__icon {
+  background: #000000;
+  width: 68px;
+  height: 68px;
+  z-index: 3;
+  position: absolute;
+  border: 1px solid #9f6d37;
+  cursor: pointer;
+}
+
+
+.spells__number {
   position: absolute;
   background: url("../../pages/assets/images/spellNumber.png") no-repeat;
   display: flex;
@@ -426,6 +481,18 @@
   font-size: 14px;
   color: #c2aa97;
   font-weight: 800;
+  z-index: 10;
+}
+
+.xp-window {
+  position: absolute;
+  top: -37px;
+  display: flex;
+  right: 20px;
+}
+
+.margin {
+  margin-bottom: 80px;
 }
 
 
