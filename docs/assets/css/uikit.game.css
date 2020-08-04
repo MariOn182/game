@@ -1,0 +1,1085 @@
+/*! UIkit 3.2.4 | http://www.getuikit.com | (c) 2014 - 2019 YOOtheme | MIT License */
+/* ========================================================================
+   Component: Base
+ ========================================================================== */
+/*
+ * 1. Set `font-size` to support `rem` units
+ *    Not using `font` property because a leading hyphen (e.g. -apple-system) causes the font to break in IE11 and Edge
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ * 3. Style
+ */
+html {
+  /* 1 */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.5;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 3 */
+  background: #fff;
+  color: #666;
+}
+/*
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0;
+}
+/* Links
+ ========================================================================== */
+/*
+ * Remove the outline on focused links when they are also active or hovered
+ */
+a:active,
+a:hover {
+  outline: none;
+}
+/*
+ * Style
+ */
+a,
+.uk-link {
+  color: #1e87f0;
+  text-decoration: none;
+  cursor: pointer;
+}
+a:hover,
+.uk-link:hover,
+.uk-link-toggle:hover .uk-link,
+.uk-link-toggle:focus .uk-link {
+  color: #0f6ecd;
+  text-decoration: underline;
+}
+/* Text-level semantics
+ ========================================================================== */
+/*
+ * 1. Add the correct text decoration in Edge.
+ * 2. The shorthand declaration `underline dotted` is not supported in Safari.
+ */
+abbr[title] {
+  /* 1 */
+  text-decoration: underline dotted;
+  /* 2 */
+  -webkit-text-decoration-style: dotted;
+}
+/*
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+/*
+ * 1. Consolas has a better baseline in running text compared to `Courier`
+ * 2. Correct the odd `em` font sizing in all browsers.
+ * 3. Style
+ */
+:not(pre) > code,
+:not(pre) > kbd,
+:not(pre) > samp {
+  /* 1 */
+  font-family: Consolas, monaco, monospace;
+  /* 2 */
+  font-size: 0.875rem;
+  /* 3 */
+  color: #f0506e;
+  white-space: nowrap;
+}
+/*
+ * Emphasize
+ */
+em {
+  color: #f0506e;
+}
+/*
+ * Insert
+ */
+ins {
+  background: #ffd;
+  color: #666;
+  text-decoration: none;
+}
+/*
+ * Mark
+ */
+mark {
+  background: #ffd;
+  color: #666;
+}
+/*
+ * Quote
+ */
+q {
+  font-style: italic;
+}
+/*
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+/*
+ * Prevents `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+/* Embedded content
+ ========================================================================== */
+/*
+ * Remove the gap between embedded content and the bottom of their containers.
+ */
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+/*
+ * 1. Add responsiveness.
+ * 2. Auto-scale the height. Only needed if `height` attribute is present.
+ * 3. Corrects responsive `max-width` behavior if padding and border are used.
+ * 4. Exclude SVGs for IE11 because they don't preserve their aspect ratio.
+ */
+canvas,
+img,
+video {
+  /* 1 */
+  max-width: 100%;
+  /* 2 */
+  height: auto;
+  /* 3 */
+  box-sizing: border-box;
+}
+/* 4 */
+@supports (display: block) {
+  svg {
+    max-width: 100%;
+    height: auto;
+    box-sizing: border-box;
+  }
+}
+/*
+ * Hide the overflow in IE.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+/*
+ * 1. Fix lazy loading images if parent element is set to `display: inline` and has `overflow: hidden`.
+ * 2. Hide `alt` text for lazy loading images.
+ * Note: Selector for background while loading img[data-src*='.jpg'][src*='data:image'] { background: grey; }
+ */
+img:not([src]) {
+  /* 1 */
+  min-width: 1px;
+  /* 2 */
+  visibility: hidden;
+}
+/*
+ * Iframe
+ * Remove border in all browsers
+ */
+iframe {
+  border: 0;
+}
+/* Block elements
+ ========================================================================== */
+/*
+ * Margins
+ */
+p,
+ul,
+ol,
+dl,
+pre,
+address,
+fieldset,
+figure {
+  margin: 0 0 20px 0;
+}
+/* Add margin if adjacent element */
+* + p,
+* + ul,
+* + ol,
+* + dl,
+* + pre,
+* + address,
+* + fieldset,
+* + figure {
+  margin-top: 20px;
+}
+/* Headings
+ ========================================================================== */
+h1,
+.uk-h1,
+h2,
+.uk-h2,
+h3,
+.uk-h3,
+h4,
+.uk-h4,
+h5,
+.uk-h5,
+h6,
+.uk-h6,
+.uk-heading-small,
+.uk-heading-medium,
+.uk-heading-large,
+.uk-heading-xlarge,
+.uk-heading-2xlarge {
+  margin: 0 0 20px 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: normal;
+  color: #333;
+  text-transform: none;
+}
+/* Add margin if adjacent element */
+* + h1,
+* + .uk-h1,
+* + h2,
+* + .uk-h2,
+* + h3,
+* + .uk-h3,
+* + h4,
+* + .uk-h4,
+* + h5,
+* + .uk-h5,
+* + h6,
+* + .uk-h6,
+* + .uk-heading-small,
+* + .uk-heading-medium,
+* + .uk-heading-large,
+* + .uk-heading-xlarge,
+* + .uk-heading-2xlarge {
+  margin-top: 40px;
+}
+/*
+ * Sizes
+ */
+h1,
+.uk-h1 {
+  font-size: 2.23125rem;
+  line-height: 1.2;
+}
+h2,
+.uk-h2 {
+  font-size: 1.7rem;
+  line-height: 1.3;
+}
+h3,
+.uk-h3 {
+  font-size: 1.5rem;
+  line-height: 1.4;
+}
+h4,
+.uk-h4 {
+  font-size: 1.25rem;
+  line-height: 1.4;
+}
+h5,
+.uk-h5 {
+  font-size: 16px;
+  line-height: 1.4;
+}
+h6,
+.uk-h6 {
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+/* Tablet landscape and bigger */
+@media (min-width: 960px) {
+  h1,
+  .uk-h1 {
+    font-size: 2.625rem;
+  }
+  h2,
+  .uk-h2 {
+    font-size: 2rem;
+  }
+}
+/* Lists
+ ========================================================================== */
+ul,
+ol {
+  padding-left: 30px;
+}
+/*
+ * Reset margin for nested lists
+ */
+ul > li > ul,
+ul > li > ol,
+ol > li > ol,
+ol > li > ul {
+  margin: 0;
+}
+/* Description lists
+ ========================================================================== */
+dt {
+  font-weight: bold;
+}
+dd {
+  margin-left: 0;
+}
+/* Horizontal rules
+ ========================================================================== */
+/*
+ * 1. Show the overflow in Chrome, Edge and IE.
+ * 2. Add the correct text-align in Edge and IE.
+ * 3. Style
+ */
+hr,
+.uk-hr {
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+  text-align: inherit;
+  /* 3 */
+  margin: 0 0 20px 0;
+  border: 0;
+  border-top: 1px solid #e5e5e5;
+}
+/* Add margin if adjacent element */
+* + hr,
+* + .uk-hr {
+  margin-top: 20px;
+}
+/* Address
+ ========================================================================== */
+address {
+  font-style: normal;
+}
+/* Blockquotes
+ ========================================================================== */
+blockquote {
+  margin: 0 0 20px 0;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  font-style: italic;
+}
+/* Add margin if adjacent element */
+* + blockquote {
+  margin-top: 20px;
+}
+/*
+ * Content
+ */
+blockquote p:last-of-type {
+  margin-bottom: 0;
+}
+blockquote footer {
+  margin-top: 10px;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+/* Preformatted text
+ ========================================================================== */
+/*
+ * 1. Contain overflow in all browsers.
+ */
+pre {
+  font: 0.875rem / 1.5 Consolas, monaco, monospace;
+  color: #666;
+  -moz-tab-size: 4;
+  tab-size: 4;
+  /* 1 */
+  overflow: auto;
+}
+pre code {
+  font-family: Consolas, monaco, monospace;
+}
+/* Selection pseudo-element
+ ========================================================================== */
+::selection {
+  background: #39f;
+  color: #fff;
+  text-shadow: none;
+}
+/* HTML5 elements
+ ========================================================================== */
+/*
+ * 1. Add the correct display in Edge, IE 10+, and Firefox.
+ * 2. Add the correct display in IE.
+ */
+details,
+main {
+  /* 2 */
+  display: block;
+}
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+/*
+ * Add the correct display in IE.
+ */
+template {
+  display: none;
+}
+/* Pass media breakpoints to JS
+ ========================================================================== */
+/*
+ * Breakpoints
+ */
+.uk-breakpoint-s::before {
+  content: '640px';
+}
+.uk-breakpoint-m::before {
+  content: '960px';
+}
+.uk-breakpoint-l::before {
+  content: '1200px';
+}
+.uk-breakpoint-xl::before {
+  content: '1600px';
+}
+:root {
+  --uk-breakpoint-s: 640px;
+  --uk-breakpoint-m: 960px;
+  --uk-breakpoint-l: 1200px;
+  --uk-breakpoint-xl: 1600px;
+}
+/* ========================================================================
+   Component: Progress
+ ========================================================================== */
+/*
+ * 1. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ * 2. Remove default style
+ * 3. Behave like a block element
+ * 4. Remove borders in Firefox and Edge
+ * 5. Set background color for progress container in Firefox, IE11 and Edge
+ * 6. Style
+ */
+.uk-progress {
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  /* 3 */
+  display: block;
+  width: 100%;
+  /* 4 */
+  border: 0;
+  /* 5 */
+  background-color: #f8f8f8;
+  /* 6 */
+  margin-bottom: 20px;
+  height: 15px;
+}
+/* Add margin if adjacent element */
+* + .uk-progress {
+  margin-top: 20px;
+}
+/*
+ * Remove animated circles for indeterminate state in IE11 and Edge
+ */
+.uk-progress:indeterminate {
+  color: transparent;
+}
+/*
+ * Progress container
+ * 2. Remove progress bar for indeterminate state in Firefox
+ */
+.uk-progress::-webkit-progress-bar {
+  background-color: #f8f8f8;
+}
+/* 2 */
+.uk-progress:indeterminate::-moz-progress-bar {
+  width: 0;
+}
+/*
+ * Progress bar
+ * 1. Remove right border in IE11 and Edge
+ */
+.uk-progress::-webkit-progress-value {
+  background-color: #1e87f0;
+  transition: width 0.6s ease;
+}
+.uk-progress::-moz-progress-bar {
+  background-color: #1e87f0;
+}
+.uk-progress::-ms-fill {
+  background-color: #1e87f0;
+  transition: width 0.6s ease;
+  /* 1 */
+  border: 0;
+}
+/* ========================================================================
+   Component: Inverse
+ ========================================================================== */
+/*
+ * Implemented class depends on the general theme color
+ * `uk-light` is for light colors on dark backgrounds
+ * `uk-dark` is or dark colors on light backgrounds
+ */
+.uk-light {
+  color: rgba(255, 255, 255, 0.7);
+}
+.uk-light a,
+.uk-light .uk-link {
+  color: #fff;
+}
+.uk-light a:hover,
+.uk-light .uk-link:hover {
+  color: #fff;
+}
+.uk-light :not(pre) > code,
+.uk-light :not(pre) > kbd,
+.uk-light :not(pre) > samp {
+  color: rgba(255, 255, 255, 0.7);
+}
+.uk-light em {
+  color: #fff;
+}
+.uk-light h1,
+.uk-light .uk-h1,
+.uk-light h2,
+.uk-light .uk-h2,
+.uk-light h3,
+.uk-light .uk-h3,
+.uk-light h4,
+.uk-light .uk-h4,
+.uk-light h5,
+.uk-light .uk-h5,
+.uk-light h6,
+.uk-light .uk-h6,
+.uk-light .uk-heading-small,
+.uk-light .uk-heading-medium,
+.uk-light .uk-heading-large,
+.uk-light .uk-heading-xlarge,
+.uk-light .uk-heading-2xlarge {
+  color: #fff;
+}
+.uk-light hr,
+.uk-light .uk-hr {
+  border-top-color: rgba(255, 255, 255, 0.2);
+}
+@font-face {
+  font-family: 'Linux Libertine';
+  src: url('../../pages/assets/fonts/LinLibertine_R.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Linux Libertine';
+  src: url('../../pages/assets/fonts/LinLibertine_RB.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+.wrap {
+  padding: 0 100px;
+}
+.card {
+  position: relative;
+  min-width: 500px;
+  min-height: 130px;
+  background: #0e0b09;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  padding: 30px 30px 20px 30px;
+  box-sizing: border-box;
+}
+.card__default,
+.card__error,
+.card__warning,
+.card__info,
+.card__success {
+  width: 500px;
+}
+.card__warning {
+  background: #e8c07e;
+}
+.card__error {
+  background: #c28484;
+}
+.card__success {
+  background: #bbcc96;
+}
+.card__info {
+  background: #9dbac3;
+}
+.notice {
+  width: 130px;
+  height: 75px;
+  display: block;
+  margin-right: 20px;
+}
+.notice_warning {
+  background: url("../../pages/assets/images/noticeWarning.png") no-repeat;
+}
+.notice_info {
+  background: url("../../pages/assets/images/noticeInfo.png") no-repeat;
+}
+.notice_success {
+  background: url("../../pages/assets/images/noticeSuccess.png") no-repeat;
+}
+.notice_error {
+  background: url("../../pages/assets/images/noticeError.png") no-repeat;
+}
+.card__text h2 {
+  margin: 0 0 5px;
+  font-size: 25px;
+  font-family: Linux Libertine, serif;
+  font-weight: 800;
+}
+.card__text p {
+  font-size: 12px;
+  font-family: Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.border {
+  display: flex;
+  width: 100%;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(top, #101115, #1d2226);
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#101115), to(#1d2226));
+  background: -webkit-linear-gradient(top, #101115, #1d2226);
+  background: -moz-linear-gradient(top, #101115, #1d2226);
+  background: -o-linear-gradient(top, #101115, #1d2226);
+  background: -ms-linear-gradient(top, #101115, #1d2226);
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr=' #101115', endColorstr='#1d2226', GradientType=0);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=' #101115',endColorstr='#1d2226')";
+}
+.border_bottom {
+  bottom: -10px;
+  top: auto;
+}
+.border_vertical {
+  top: 10px;
+  left: 0;
+  width: 20px;
+  height: 100%;
+  background: linear-gradient(bottom, #101115, #1d2226);
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#1d2226), to(#101115));
+  background: -webkit-linear-gradient(bottom, #101115, #1d2226);
+  background: -moz-linear-gradient(bottom, #101115, #1d2226);
+  background: -o-linear-gradient(bottom, #101115, #1d2226);
+  background: -ms-linear-gradient(bottom, #101115, #1d2226);
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#1d2226', endColorstr='#101115', GradientType=0);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=' #1d2226',endColorstr='#101115')";
+}
+.border_vertical-right {
+  right: 0;
+  left: auto;
+  background: linear-gradient(bottom, #101115, #1d2226);
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#1d2226), to(#101115));
+  background: -webkit-linear-gradient(bottom, #101115, #1d2226);
+  background: -moz-linear-gradient(bottom, #101115, #1d2226);
+  background: -o-linear-gradient(bottom, #101115, #1d2226);
+  background: -ms-linear-gradient(bottom, #101115, #1d2226);
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#1d2226', endColorstr='#101115', GradientType=0);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=' #1d2226',endColorstr='#101115')";
+}
+.border_vertical:after {
+  display: none;
+}
+.border-overlay {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 9px;
+  z-index: 50;
+  background: linear-gradient(bottom, #69726f, #44484b, #2c3033);
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#69726f), to(#101115));
+  background: -webkit-linear-gradient(bottom, #69726f, #44484b, #2c3033);
+  background: -moz-linear-gradient(bottom, #69726f, #44484b, #2c3033);
+  background: -o-linear-gradient(bottom, #69726f, #44484b, #2c3033);
+  background: -ms-linear-gradient(bottom, #69726f, #44484b, #2c3033);
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#69726f', endColorstr=' #2c3033)', GradientType=0);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=' #69726f',endColorstr=' #2c3033)')";
+}
+.border-overlay_bottom {
+  top: 100%;
+  background: linear-gradient(bottom, #2c3033, #44484b, #69726f);
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#2c3033), to(#101115));
+  background: -webkit-linear-gradient(bottom, #2c3033, #44484b, #69726f);
+  background: -moz-linear-gradient(bottom, #2c3033, #44484b, #69726f);
+  background: -o-linear-gradient(bottom, #2c3033, #44484b, #69726f);
+  background: -ms-linear-gradient(bottom, #2c3033, #44484b, #69726f);
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#2c3033', endColorstr=' #69726f)', GradientType=0);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=' #2c3033',endColorstr=' #69726f)')";
+}
+.border-overlay_left {
+  left: 0;
+  width: 10px;
+  height: 100%;
+  background: linear-gradient(left, #2c3033 #2c3033, #44484b, #69726f);
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#2c3033), to(#101115));
+  background: -webkit-linear-gradient(left, #2c3033, #2c3033, #44484b, #69726f);
+  background: -moz-linear-gradient(left, #2c3033, #2c3033, #44484b, #69726f);
+  background: -o-linear-gradient(left, #2c3033, #2c3033, #44484b, #69726f);
+  background: -ms-linear-gradient(left, #2c3033, #2c3033, #44484b, #69726f);
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#2c3033', endColorstr=' #69726f)', GradientType=0);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=' #2c3033',endColorstr=' #69726f)')";
+}
+.border-overlay_right {
+  transform: rotate(180deg);
+  left: auto;
+  right: 0;
+}
+.corner_default {
+  display: block;
+  z-index: 100;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+}
+.corner_default-top-left {
+  top: -11px;
+  left: -22px;
+}
+.corner_default-bottom-right {
+  transform: scale(-1, -1);
+}
+.corner_default-bottom-left {
+  transform: scaleY(-1);
+}
+.corner_arrow {
+  background: url("../../pages/assets/images/arrow.png") no-repeat;
+}
+.corner_arrow-bottom-left {
+  bottom: -21px;
+  left: -21px;
+}
+.corner_arrow-bottom-right {
+  right: -21px;
+  bottom: -21px;
+}
+.corner_arrow-bottom-right {
+  bottom: -21px;
+}
+.corner_leaf {
+  background: url("../../pages/assets/images/leaf.png") no-repeat;
+  left: -10px;
+}
+.corner_leaf-bottom-left {
+  bottom: -23px;
+}
+.corner_leaf-bottom-right {
+  bottom: -23px;
+  right: -13px;
+  left: auto;
+}
+.corner_wood {
+  background: url("../../pages/assets/images/wood.png") no-repeat;
+  top: -5px;
+  left: -6px;
+}
+.corner_wood-bottom-left {
+  top: auto;
+  bottom: -14px;
+}
+.corner_wood-bottom-right {
+  top: auto;
+  left: auto;
+  right: -6px;
+  bottom: -14px;
+}
+.corner_metal {
+  background: url("../../pages/assets/images/metal.png") no-repeat;
+  left: -50px;
+  top: -10px;
+}
+.corner_metal-bottom-left {
+  top: auto;
+  bottom: -22px;
+}
+.corner_metal-bottom-right {
+  left: auto;
+  top: auto;
+  bottom: -22px;
+  right: -55px;
+}
+.close {
+  background: url("../../pages/assets/images/close.png") no-repeat;
+  display: block;
+  z-index: 300;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  right: -66px;
+  top: -8px;
+  cursor: pointer;
+}
+.corner {
+  background: url("../../pages/assets/images/corner.png") no-repeat;
+  position: absolute;
+  width: 11px;
+  height: 15px;
+  right: 0;
+  top: 0;
+  z-index: 150;
+}
+.corner_top-left {
+  left: 2px;
+  top: -2px;
+  transform: rotate(-90deg);
+}
+.corner_bottom-left {
+  top: auto;
+  bottom: -10px;
+  transform: rotate(-180deg);
+  left: 0;
+}
+.corner_bottom-right {
+  top: auto;
+  bottom: -12px;
+  right: 2px;
+  transform: rotate(90deg);
+}
+.avatar__wrap {
+  width: 220px;
+  height: 220px;
+  display: flex;
+  background: url("../../pages/assets/images/avatarWrap.png") no-repeat center;
+  z-index: 2;
+}
+.avatar {
+  background: url("../../pages/assets/images/avatar.png") no-repeat center;
+  width: inherit;
+  height: inherit;
+  z-index: 2;
+}
+.stats {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 35px;
+  left: 185px;
+}
+.stats_inverse {
+  left: -300px;
+}
+.progress {
+  position: relative;
+  overflow: hidden;
+  background: #13100d;
+  height: 45px;
+  border-radius: 10px;
+  border: 5px solid #493026;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 5px;
+}
+.progress:not(:last-child) {
+  margin-bottom: 4px;
+}
+.progress_life {
+  width: 350px;
+  margin-bottom: 5px !important;
+}
+.progress_mana,
+.progress_exp {
+  width: 330px;
+}
+.progress progress {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  left: -777px;
+}
+.progress-bar {
+  overflow: hidden;
+  background: #070707;
+  width: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.progress-bar_life {
+  background: #ff999a;
+  background: -moz-linear-gradient(top, #ff999a 0%, #ff494c 50%, #ff3538 51%, #c90808 100%);
+  background: -webkit-linear-gradient(top, #ff999a 0%, #ff494c 50%, #ff3538 51%, #c90808 100%);
+  background: linear-gradient(to bottom, #ff999a 0%, #ff494c 50%, #ff3538 51%, #c90808 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff999a', endColorstr='#c90808', GradientType=0);
+}
+.progress-bar_mana {
+  background: #99d6ff;
+  background: -moz-linear-gradient(top, #99d6ff 0%, #335bb2 50%, #2b5fc6 51%, #042870 100%);
+  background: -webkit-linear-gradient(top, #99d6ff 0%, #335bb2 50%, #2b5fc6 51%, #042870 100%);
+  background: linear-gradient(to bottom, #99d6ff 0%, #335bb2 50%, #2b5fc6 51%, #042870 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#99d6ff', endColorstr='#042870', GradientType=0);
+}
+.progress-bar_exp {
+  background: #b4e391;
+  background: -moz-linear-gradient(top, #b4e391 0%, #469313 50%, #2d7716 100%);
+  background: -webkit-linear-gradient(top, #b4e391 0%, #469313 50%, #2d7716 100%);
+  background: linear-gradient(to bottom, #b4e391 0%, #469313 50%, #2d7716 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b4e391', endColorstr='#2d7716', GradientType=0);
+}
+.progress-bar_xp {
+  background: #b4e391;
+  background: -moz-linear-gradient(top, #b4e391 10%, #a3d130 50%, #2d7716 100%);
+  background: -webkit-linear-gradient(top, #b4e391 10%, #a3d130 50%, #2d7716 100%);
+  background: linear-gradient(to bottom, #b4e391 10%, #a3d130 50%, #2d7716 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b4e391', endColorstr='#2d7716', GradientType=0);
+}
+.progress-value {
+  color: #fffefe;
+  font-size: 18px;
+  font-family: Linux Libertine, serif;
+  font-weight: 800;
+  display: block;
+  line-height: 21px;
+  text-align: center;
+  position: absolute;
+  z-index: 50;
+  left: 60px;
+}
+.progress-value_xp {
+  width: 100%;
+  position: static;
+  color: #c2aa97;
+}
+.progress-bg {
+  position: relative;
+  overflow: hidden;
+  background: #070707;
+  width: 100%;
+  margin: 0 0 0 45px !important;
+  height: 25px;
+  display: flex;
+  border: 1px solid #493026;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+.progress-bar {
+  transition: width 1s linear;
+}
+.progress-bg_inverse {
+  margin: 0 45px 0 0 !important;
+}
+.progress-bg_xp {
+  margin: 0 !important;
+  height: 10px;
+}
+.progress_xp-num {
+  min-width: 125px;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  overflow: inherit;
+}
+.progress_xp-scale {
+  width: 740px;
+}
+.progress_xp-num,
+.progress_xp-scale {
+  border-radius: 5px;
+  height: 40px;
+}
+.character-stats {
+  position: relative;
+  display: flex;
+  width: fit-content;
+}
+.character-info {
+  display: flex;
+  margin-left: 20px;
+}
+.nickname,
+.class,
+.role,
+.progress_xp-num p {
+  margin: 0;
+  padding: 0;
+  font-size: 22px;
+  font-family: Linux Libertine, serif;
+  font-weight: 800;
+  color: #c2aa97;
+}
+.nickname,
+.class {
+  margin-right: 10px;
+}
+.spells-bar {
+  display: grid;
+  grid-template-columns: repeat(10, auto);
+  gap: 20px 13px;
+  margin-left: auto;
+  width: 78%;
+}
+.spells-bar__wrap {
+  width: 78px;
+  height: 78px;
+  z-index: 2;
+  position: absolute;
+  background: #323638;
+  top: -4px;
+  left: -4px;
+}
+.spells-bar__item {
+  width: 70px;
+  height: 70px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 5;
+}
+.spells__icon {
+  background: #000000;
+  width: 68px;
+  height: 68px;
+  z-index: 3;
+  position: absolute;
+  border: 1px solid #9f6d37;
+  cursor: pointer;
+}
+.spells__number {
+  position: absolute;
+  background: url("../../pages/assets/images/spellNumber.png") no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 27px;
+  height: 27px;
+  top: -15px;
+  left: 28%;
+  font-family: Linux Libertine, serif;
+  font-size: 14px;
+  color: #c2aa97;
+  font-weight: 800;
+  z-index: 10;
+}
+.xp-window {
+  position: absolute;
+  top: -33px;
+  display: flex;
+  right: 20px;
+}
+.extra-points {
+  color: #41d313;
+  font-size: 16px;
+  font-family: Linux Libertine, serif;
+  font-weight: 800;
+  position: absolute;
+  top: -11px;
+}
+.margin {
+  margin-bottom: 80px;
+}
