@@ -572,13 +572,13 @@ template {
 }
 @font-face {
   font-family: 'Linux Libertine';
-  src: url('../../pages/assets/fonts/LinLibertine_R.ttf') format('truetype');
+  src: url('../fonts/LinLibertine_R.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
   font-family: 'Linux Libertine';
-  src: url('../../pages/assets/fonts/LinLibertine_RB.ttf') format('truetype');
+  src: url('../fonts/LinLibertine_R.ttf') format('truetype');
   font-weight: 800;
   font-style: normal;
 }
@@ -622,16 +622,16 @@ template {
   margin-right: 20px;
 }
 .notice_warning {
-  background: url("../../pages/assets/images/noticeWarning.png") no-repeat;
+  background: url("../images/noticeWarning.png") no-repeat;
 }
 .notice_info {
-  background: url("../../pages/assets/images/noticeInfo.png") no-repeat;
+  background: url("../images/noticeInfo.png") no-repeat;
 }
 .notice_success {
-  background: url("../../pages/assets/images/noticeSuccess.png") no-repeat;
+  background: url("../images/noticeSuccess.png") no-repeat;
 }
 .notice_error {
-  background: url("../../pages/assets/images/noticeError.png") no-repeat;
+  background: url("../images/noticeError.png") no-repeat;
 }
 .card__text h2 {
   margin: 0 0 5px;
@@ -757,7 +757,7 @@ template {
   transform: scaleY(-1);
 }
 .corner_arrow {
-  background: url("../../pages/assets/images/arrow.png") no-repeat;
+  background: url("../images/arrow.png") no-repeat;
 }
 .corner_arrow-bottom-left {
   bottom: -21px;
@@ -771,7 +771,7 @@ template {
   bottom: -21px;
 }
 .corner_leaf {
-  background: url("../../pages/assets/images/leaf.png") no-repeat;
+  background: url("../images/leaf.png") no-repeat;
   left: -10px;
 }
 .corner_leaf-bottom-left {
@@ -783,7 +783,7 @@ template {
   left: auto;
 }
 .corner_wood {
-  background: url("../../pages/assets/images/wood.png") no-repeat;
+  background: url("../images/wood.png") no-repeat;
   top: -5px;
   left: -6px;
 }
@@ -798,7 +798,7 @@ template {
   bottom: -14px;
 }
 .corner_metal {
-  background: url("../../pages/assets/images/metal.png") no-repeat;
+  background: url("../images/metal.png") no-repeat;
   left: -50px;
   top: -10px;
 }
@@ -813,7 +813,7 @@ template {
   right: -55px;
 }
 .close {
-  background: url("../../pages/assets/images/close.png") no-repeat;
+  background: url("../images/close.png") no-repeat;
   display: block;
   z-index: 300;
   position: absolute;
@@ -824,7 +824,7 @@ template {
   cursor: pointer;
 }
 .corner {
-  background: url("../../pages/assets/images/corner.png") no-repeat;
+  background: url("../images/corner.png") no-repeat;
   position: absolute;
   width: 11px;
   height: 15px;
@@ -853,11 +853,11 @@ template {
   width: 220px;
   height: 220px;
   display: flex;
-  background: url("../../pages/assets/images/avatarWrap.png") no-repeat center;
+  background: url("../images/avatarWrap.png") no-repeat center;
   z-index: 2;
 }
 .avatar {
-  background: url("../../pages/assets/images/avatar.png") no-repeat center;
+  background: url("../images/avatar.png") no-repeat center;
   width: inherit;
   height: inherit;
   z-index: 2;
@@ -1052,7 +1052,7 @@ template {
 }
 .spells__number {
   position: absolute;
-  background: url("../../pages/assets/images/spellNumber.png") no-repeat;
+  background: url("../images/spellNumber.png") no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
