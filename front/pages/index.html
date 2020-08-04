@@ -49,6 +49,16 @@
         <span class="corner corner_bottom-left"></span>
         <span class="corner corner_bottom-right"></span>
 
+        <span class="notice notice_error"></span>
+        <div class="card__text">
+
+            <h2>Information :</h2>
+
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                sed diam nonummy nibh euismod ...	</p>
+
+        </div>
+
     </div>
     <div class="card card__info margin-bottom-30">
         <span class="border"></span>
@@ -65,6 +75,17 @@
         <span class="corner corner_top-left"></span>
         <span class="corner corner_bottom-left"></span>
         <span class="corner corner_bottom-right"></span>
+
+        <span class="notice notice_info"></span>
+
+        <div class="card__text">
+
+            <h2>Information :</h2>
+
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                sed diam nonummy nibh euismod ...	</p>
+
+        </div>
 
     </div>
     <div class="card card__success  margin-bottom-30">
@@ -83,6 +104,16 @@
         <span class="corner corner_bottom-left"></span>
         <span class="corner corner_bottom-right"></span>
 
+        <span class="notice notice_success"></span>
+        <div class="card__text">
+
+            <h2>Information :</h2>
+
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                sed diam nonummy nibh euismod ...	</p>
+
+        </div>
+
     </div>
     <div class="card card__warning margin-bottom-30">
         <span class="border"></span>
@@ -99,6 +130,16 @@
         <span class="corner corner_top-left"></span>
         <span class="corner corner_bottom-left"></span>
         <span class="corner corner_bottom-right"></span>
+
+        <span class="notice notice_warning"></span>
+        <div class="card__text">
+
+            <h2>Information :</h2>
+
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                sed diam nonummy nibh euismod ...	</p>
+
+        </div>
 
     </div>
 
@@ -187,7 +228,12 @@
         </div>
 
 
-        <p class="nickname">Nickname,</p> <p class="class">class,</p> <p class="role">role</p>
+        <div class="character-info">
+            <p class="nickname">Nickname,</p>
+            <p class="class">class,</p>
+            <p class="role">role</p>
+        </div>
+
 
         <div class="stats">
 
@@ -207,6 +253,26 @@
     </div>
 
 </div>
+
+<script>
+
+    UIkit.util.ready(function () {
+
+        var bar = document.getElementById('js-progressbar');
+
+        var animate = setInterval(function () {
+
+            bar.value += 10;
+
+            if (bar.value >= bar.max) {
+                clearInterval(animate);
+            }
+
+        }, 1000);
+
+    });
+
+</script>
 
 
 </body>
