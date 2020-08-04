@@ -250,14 +250,20 @@
 
         <div class="stats">
 
-            <div class="bar__wrap bar__wrap_life">
-                <span class="bar bar_life"></span>
+            <div class="progress progress_life">
+                <progress max="100" value="0"></progress>
+                <div class="progress-value">128 / 145</div>
+                <div class="progress-bg"><div class="progress-bar progress-bar_life"></div></div>
             </div>
-            <div class="bar__wrap">
-                <span class="bar bar_mana"></span>
+            <div class="progress progress_mana">
+                <progress max="100" value="0"></progress>
+                <div class="progress-value">128 / 145</div>
+                <div class="progress-bg"><div class="progress-bar progress-bar_mana"></div></div>
             </div>
-            <div class="bar__wrap">
-                <span class="bar bar_energy"></span>
+            <div class="progress progress_exp">
+                <progress max="100" value="0"></progress>
+                <div class="progress-value">128 / 145</div>
+                <div class="progress-bg"><div class="progress-bar progress-bar_exp"></div></div>
             </div>
 
 
@@ -284,17 +290,15 @@
 
         <div class="xp-window">
 
-            <div class="bar__wrap bar__wrap_xp-num">
-                <p>XP:</p>
-                <p>386</p>
-                <p>/</p>
-                <p>1120</p>
+            <div class="progress progress_xp-num">
+                <div class="progress-value progress-value_xp">xp: 128 / 145</div>
             </div>
 
-
-            <div class="bar__wrap bar__wrap_xp-scale">
-                <span class="bar  bar_xp"></span>
+            <div class="progress progress_xp-scale">
+                <progress max="100" value="0"></progress>
+                <div class="progress-bg progress-bg_xp"><div class="progress-bar progress-bar_xp"></div></div>
             </div>
+
 
         </div>
 
@@ -376,25 +380,6 @@
 
 </div>
 
-<script>
-
-    UIkit.util.ready(function () {
-
-        var bar = document.getElementById('js-progressbar');
-
-        var animate = setInterval(function () {
-
-            bar.value += 10;
-
-            if (bar.value >= bar.max) {
-                clearInterval(animate);
-            }
-
-        }, 1000);
-
-    });
-
-</script>
 
 
 </body>

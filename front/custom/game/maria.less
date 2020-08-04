@@ -336,9 +336,10 @@
   left: -300px;
 }
 
-.bar__wrap {
+.progress {
+  position: relative;
+  overflow: hidden;
   background: #13100d;
-  width: 330px;
   height: 45px;
   border-radius: 10px;
   border: 5px solid #493026;
@@ -349,63 +350,131 @@
   padding: 5px;
 }
 
-.bar__wrap:not(:last-child) {
+.progress:not(:last-child) {
   margin-bottom: 4px;
 }
 
-.bar__wrap_life {
+.progress_life {
   width: 350px;
   margin-bottom: 5px !important;
 }
 
-.bar__wrap_xp-num {
-  width: 125px;
-  margin-right: 10px;
-  display: flex;
-  align-items: center;
+.progress_mana, .progress_exp{
+  width: 330px;
 }
 
-.bar__wrap_xp-num p {
-  font-size: 18px !important;
+
+.progress progress {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  left: -777px;
 }
 
-.bar__wrap_xp-num p:first-child {
-  font-size: 11px !important;
-  margin-top: 5px;
+.progress-bar {
+  overflow: hidden;
+  background: #070707;
+  width: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
-.bar__wrap_xp-num p:not(:last-child) {
-  margin-right: 5px;
+.progress-bar_life {
+  background: #ff999a;
+  background: -moz-linear-gradient(top, #ff999a 0%, #ff494c 50%, #ff3538 51%, #c90808 100%);
+  background: -webkit-linear-gradient(top, #ff999a 0%, #ff494c 50%, #ff3538 51%, #c90808 100%);
+  background: linear-gradient(to bottom, #ff999a 0%, #ff494c 50%, #ff3538 51%, #c90808 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff999a', endColorstr='#c90808',GradientType=0);
 }
 
-.bar__wrap_xp-scale {
-  width: 740px;
+.progress-bar_mana {
+  background: #99d6ff;
+  background: -moz-linear-gradient(top, #99d6ff 0%, #335bb2 50%, #2b5fc6 51%, #042870 100%);
+  background: -webkit-linear-gradient(top, #99d6ff 0%, #335bb2 50%, #2b5fc6 51%, #042870 100%);
+  background: linear-gradient(to bottom, #99d6ff 0%, #335bb2 50%, #2b5fc6 51%, #042870 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#99d6ff', endColorstr='#042870',GradientType=0);
 }
 
-.bar__wrap_xp-num, .bar__wrap_xp-scale {
-  border-radius: 5px;
-  height: 40px;
+.progress-bar_exp {
+  background: #b4e391;
+  background: -moz-linear-gradient(top, #b4e391 0%, #469313 50%, #2d7716 100%);
+  background: -webkit-linear-gradient(top, #b4e391 0%, #469313 50%, #2d7716 100%);
+  background: linear-gradient(to bottom, #b4e391 0%, #469313 50%, #2d7716 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b4e391', endColorstr='#2d7716',GradientType=0);
+
+
 }
 
-.bar {
+.progress-bar_xp {
+  background: #b4e391;
+  background: -moz-linear-gradient(top, #b4e391 10%, #a3d130 50%, #2d7716 100%);
+  background: -webkit-linear-gradient(top, #b4e391 10%, #a3d130 50%, #2d7716 100%);
+  background: linear-gradient(to bottom, #b4e391 10%, #a3d130 50%, #2d7716 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b4e391', endColorstr='#2d7716',GradientType=0);
+}
+
+.progress-value {
+  color: #fffefe;
+  font-size: 18px;
+  font-family: Linux Libertine, serif;
+  font-weight: 800;
+  display: block;
+  line-height: 21px;
+  text-align: center;
+  position: absolute;
+  z-index: 50;
+  left: 60px;
+}
+
+.progress-value_xp {
+  width: 100%;
+  position: static;
+  color: #c2aa97;
+}
+
+.progress-bg {
+  position: relative;
+  overflow: hidden;
   background: #070707;
   width: 100%;
   margin: 0 0 0 45px !important;
-  height: 20px;
+  height: 25px;
   display: flex;
   border: 1px solid #493026;
   box-sizing: border-box;
   border-radius: 5px;
 }
 
+.progress-bar {
+  transition: width 1s linear;
+}
 
-.bar_inverse {
+.progress-bg_inverse {
   margin: 0 45px 0 0 !important;
 }
 
-.bar_xp {
+.progress-bg_xp {
   margin: 0 !important;
   height: 10px;
+}
+
+.progress_xp-num {
+  min-width: 125px;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.progress_xp-scale {
+  width: 740px;
+}
+
+.progress_xp-num, .progress_xp-scale {
+  border-radius: 5px;
+  height: 40px;
 }
 
 
@@ -420,7 +489,7 @@
   margin-left: 20px;
 }
 
-.nickname, .class, .role, .bar__wrap_xp-num p {
+.nickname, .class, .role, .progress_xp-num p {
   margin: 0;
   padding: 0;
   font-size: 22px;
@@ -468,7 +537,6 @@
   border: 1px solid #9f6d37;
   cursor: pointer;
 }
-
 
 .spells__number {
   position: absolute;
