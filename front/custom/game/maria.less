@@ -85,12 +85,12 @@
   top: 0;
   height: 9px;
   z-index: 50;
-  background: linear-gradient(bottom, #69726f,  #44484b, #2c3033);
+  background: linear-gradient(bottom, #69726f, #44484b, #2c3033);
   background: -webkit-gradient(linear, 0 0, 0 100%, from(#69726f), to(#101115));
   background: -webkit-linear-gradient(bottom, #69726f, #44484b, #2c3033);
-  background: -moz-linear-gradient(bottom, #69726f,  #44484b, #2c3033);
+  background: -moz-linear-gradient(bottom, #69726f, #44484b, #2c3033);
   background: -o-linear-gradient(bottom, #69726f, #44484b, #2c3033);
-  background: -ms-linear-gradient(bottom, #69726f,  #44484b, #2c3033);
+  background: -ms-linear-gradient(bottom, #69726f, #44484b, #2c3033);
   filter: progid:dximagetransform.microsoft.gradient(startColorstr='#69726f', endColorstr=' #2c3033)', GradientType=0);
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=' #69726f',endColorstr=' #2c3033)')";
 }
@@ -99,7 +99,7 @@
   top: 100%;
   background: linear-gradient(bottom, #2c3033, #44484b, #69726f);
   background: -webkit-gradient(linear, 0 0, 0 100%, from(#2c3033), to(#101115));
-  background: -webkit-linear-gradient(bottom, #2c3033,  #44484b,  #69726f);
+  background: -webkit-linear-gradient(bottom, #2c3033, #44484b, #69726f);
   background: -moz-linear-gradient(bottom, #2c3033, #44484b, #69726f);
   background: -o-linear-gradient(bottom, #2c3033, #44484b, #69726f);
   background: -ms-linear-gradient(bottom, #2c3033, #44484b, #69726f);
@@ -113,7 +113,7 @@
   height: inherit;
   background: linear-gradient(left, #2c3033 #2c3033, #44484b, #69726f);
   background: -webkit-gradient(linear, 0 0, 0 100%, from(#2c3033), to(#101115));
-  background: -webkit-linear-gradient(left, #2c3033, #2c3033, #44484b,  #69726f);
+  background: -webkit-linear-gradient(left, #2c3033, #2c3033, #44484b, #69726f);
   background: -moz-linear-gradient(left, #2c3033, #2c3033, #44484b, #69726f);
   background: -o-linear-gradient(left, #2c3033, #2c3033, #44484b, #69726f);
   background: -ms-linear-gradient(left, #2c3033, #2c3033, #44484b, #69726f);
@@ -261,3 +261,81 @@
   right: 2px;
   transform: rotate(90deg);
 }
+
+.avatar__wrap {
+  width: 220px;
+  height: 220px;
+  display: flex;
+  background: url("../../pages/assets/images/avatarWrap.png") no-repeat center;
+  z-index: 2;
+}
+
+.avatar {
+  background: url("../../pages/assets/images/avatar.png") no-repeat center;
+  width: inherit;
+  height: inherit;
+  z-index: 2;
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 35px;
+  left: 185px;
+}
+
+.bar__wrap {
+  background: #13100d;
+  width: 315px;
+  height: 45px;
+  border-radius: 10px;
+  border: 5px solid #493026;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 5px;
+}
+
+.bar__wrap:not(:last-child) {
+  margin-bottom: 4px;
+}
+
+.bar__wrap_life {
+  width: 350px;
+  margin-bottom: 5px !important;
+}
+
+.bar {
+  background: #070707;
+  width: 100%;
+  margin-left: 45px;
+  height: 20px;
+  display: flex;
+  border: 1px solid #493026;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+
+
+.character-stats {
+  position: relative;
+  display: flex;
+}
+
+.nickname, .class, .role {
+  margin: 0;
+  padding: 0;
+  font-size: 22px;
+  font-family: Linux Libertine, serif;
+  font-weight: 800;
+  color: #c2aa97;
+}
+
+.nickname, .class {
+  margin-right: 10px;
+}
+
+
