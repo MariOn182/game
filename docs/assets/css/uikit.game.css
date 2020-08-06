@@ -870,11 +870,11 @@ template {
   left: 185px;
 }
 .stats_inverse {
-  left: -95px;
+  left: -75px;
+  align-items: flex-end;
 }
 .progress {
   position: relative;
-  overflow: hidden;
   background: #13100d;
   height: 45px;
   border-radius: 10px;
@@ -889,28 +889,30 @@ template {
   margin-bottom: 4px;
 }
 .progress_life {
-  width: 365px;
+  width: 380px;
   margin-bottom: 5px !important;
 }
 .progress_mana,
 .progress_exp {
   width: 350px;
 }
-.progress progress {
-  position: absolute;
-  width: 0;
-  height: 0;
-  overflow: hidden;
-  left: -777px;
-}
 .progress-bar {
-  overflow: hidden;
   background: #070707;
   width: 0;
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+.progress-bar__backlight {
+  display: block;
+  width: 15px;
+  background: #dbdbdb;
+  background: linear-gradient(270deg, #dbdbdb 0%, rgba(255, 255, 250, 0.02004552) 75%);
+  height: inherit;
+  border-right: 1px solid rgba(255, 255, 255, 0.91);
 }
 .progress-bar_life {
   background: #ff999a;
@@ -952,6 +954,10 @@ template {
   z-index: 50;
   left: 60px;
 }
+.progress-value_inverse {
+  right: 75px;
+  left: auto;
+}
 .progress-value_xp {
   width: 100%;
   position: static;
@@ -973,7 +979,7 @@ template {
   transition: width 1s linear;
 }
 .progress-bg_inverse {
-  margin: 0 50px 0 0 !important;
+  margin: 0 57px 0 0 !important;
 }
 .progress-bg_xp {
   margin: 0 !important;
@@ -1008,7 +1014,7 @@ template {
   margin-left: 20px;
 }
 .character-info_inverse {
-  margin: 0;
+  margin-right: 20px;
 }
 .nickname,
 .class,
