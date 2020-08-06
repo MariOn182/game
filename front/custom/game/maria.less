@@ -333,12 +333,12 @@
 }
 
 .stats_inverse {
-  left: -95px;
+  left: -75px;
+  align-items: flex-end;
 }
 
 .progress {
   position: relative;
-  overflow: hidden;
   background: #13100d;
   height: 45px;
   border-radius: 10px;
@@ -355,7 +355,7 @@
 }
 
 .progress_life {
-  width: 365px;
+  width: 380px;
   margin-bottom: 5px !important;
 }
 
@@ -364,14 +364,6 @@
 }
 
 
-.progress progress {
-  position: absolute;
-  width: 0;
-  height: 0;
-  overflow: hidden;
-  left: -777px;
-}
-
 .progress-bar {
   background: #070707;
   width: 0;
@@ -379,7 +371,92 @@
   position: absolute;
   top: 0;
   left: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
+
+.progress-bar__backlight {
+  width: 10px;
+  background: rgb(219, 219, 219);
+  background: linear-gradient(270deg, #dbdbdb 0%, rgba(255, 255, 250, 0.02004552) 75%);
+  height: inherit;
+  -webkit-animation: pulsing 2s infinite;
+  animation: pulsing 2s infinite;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
+.progress-bar__backlight:after{
+  content: "";
+  height: 25px;
+  width: 1px;
+  background: #fff;
+
+}
+
+@-webkit-keyframes pulsing {
+  0% {
+    -webkit-transform: scale(1.0, 1.0);
+    transform: scale(1.0, 1.0)
+  }
+  50% {
+    -webkit-transform: scale(1.5, 1);
+    transform: translate(-3px) scale(1.77, 1);
+  }
+  100% {
+    -webkit-transform: scale(1.0, 1.0);
+    transform: scale(1.0, 1.0);
+  }
+}
+
+@keyframes pulsing {
+  0% {
+    -webkit-transform: scale(1.0, 1.0);
+    transform: scale(1.0, 1.0)
+  }
+  50% {
+    -webkit-transform: scale(1.5, 1);
+    transform: scale(1.5, 1);
+  }
+  100% {
+    -webkit-transform: scale(1.0, 1.0);
+    transform: scale(1.0, 1.0);
+  }
+}
+
+@-webkit-keyframes pulsing2 {
+  0% {
+    -webkit-transform: scale(1.0, 1.0);
+    transform: scale(1.0, 1.0)
+  }
+  50% {
+    -webkit-transform: scale(1, 1.1);
+    transform: scale(1, 1.1);
+  }
+  100% {
+    -webkit-transform: scale(1.0, 1.0);
+    transform: scale(1.0, 1.0);
+  }
+}
+
+@keyframes pulsing2 {
+  0% {
+    -webkit-transform: scale(1.0, 1.0);
+    transform: scale(1.0, 1.0)
+  }
+  50% {
+    -webkit-transform: scale(1, 1.1);
+    transform: scale(1, 1.1);
+  }
+  100% {
+    -webkit-transform: scale(1.0, 1.0);
+    transform: scale(1.0, 1.0);
+  }
+}
+
+
 
 .progress-bar_life {
   background: #ff999a;
@@ -428,6 +505,11 @@
   left: 60px;
 }
 
+.progress-value_inverse {
+  right: 75px;
+  left: auto;
+}
+
 .progress-value_xp {
   width: 100%;
   position: static;
@@ -436,7 +518,7 @@
 
 .progress-bg {
   position: relative;
-  overflow: hidden;
+  background: #070707;
   width: 100%;
   margin: 0 0 0 45px !important;
   height: 25px;
@@ -452,7 +534,7 @@
 }
 
 .progress-bg_inverse {
-  margin: 0 50px 0 0 !important;
+  margin: 0 57px 0 0 !important;
 }
 
 .progress-bg_xp {
@@ -484,7 +566,8 @@
   width: fit-content;
   margin: auto;
 }
-.character-stats_inverse{
+
+.character-stats_inverse {
   flex-direction: row-reverse;
 }
 
@@ -494,7 +577,7 @@
 }
 
 .character-info_inverse {
-  margin: 0;
+  margin-right: 20px;
 }
 
 .nickname, .class, .role, .progress_xp-num p {
@@ -586,7 +669,7 @@
 }
 
 
-.hidden{
+.hidden {
   display: none;
 }
 

@@ -870,11 +870,11 @@ template {
   left: 185px;
 }
 .stats_inverse {
-  left: -95px;
+  left: -75px;
+  align-items: flex-end;
 }
 .progress {
   position: relative;
-  overflow: hidden;
   background: #13100d;
   height: 45px;
   border-radius: 10px;
@@ -889,19 +889,12 @@ template {
   margin-bottom: 4px;
 }
 .progress_life {
-  width: 365px;
+  width: 380px;
   margin-bottom: 5px !important;
 }
 .progress_mana,
 .progress_exp {
   width: 350px;
-}
-.progress progress {
-  position: absolute;
-  width: 0;
-  height: 0;
-  overflow: hidden;
-  left: -777px;
 }
 .progress-bar {
   background: #070707;
@@ -910,6 +903,82 @@ template {
   position: absolute;
   top: 0;
   left: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.progress-bar__backlight {
+  width: 10px;
+  background: #dbdbdb;
+  background: linear-gradient(270deg, #dbdbdb 0%, rgba(255, 255, 250, 0.02004552) 75%);
+  height: inherit;
+  -webkit-animation: pulsing 2s infinite;
+  animation: pulsing 2s infinite;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+.progress-bar__backlight:after {
+  content: "";
+  height: 25px;
+  width: 1px;
+  background: #fff;
+}
+@-webkit-keyframes pulsing {
+  0% {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+  50% {
+    -webkit-transform: scale(1.5, 1);
+    transform: scale(1.5, 1);
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+}
+@keyframes pulsing {
+  0% {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+  50% {
+    -webkit-transform: scale(1.5, 1);
+    transform: scale(1.5, 1);
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+}
+@-webkit-keyframes pulsing2 {
+  0% {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+  50% {
+    -webkit-transform: scale(1, 1.1);
+    transform: scale(1, 1.1);
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+}
+@keyframes pulsing2 {
+  0% {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+  50% {
+    -webkit-transform: scale(1, 1.1);
+    transform: scale(1, 1.1);
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
 }
 .progress-bar_life {
   background: #ff999a;
@@ -951,6 +1020,10 @@ template {
   z-index: 50;
   left: 60px;
 }
+.progress-value_inverse {
+  right: 75px;
+  left: auto;
+}
 .progress-value_xp {
   width: 100%;
   position: static;
@@ -958,7 +1031,6 @@ template {
 }
 .progress-bg {
   position: relative;
-  overflow: hidden;
   background: #070707;
   width: 100%;
   margin: 0 0 0 45px !important;
@@ -972,7 +1044,7 @@ template {
   transition: width 0.2s linear;
 }
 .progress-bg_inverse {
-  margin: 0 50px 0 0 !important;
+  margin: 0 57px 0 0 !important;
 }
 .progress-bg_xp {
   margin: 0 !important;
@@ -1007,7 +1079,7 @@ template {
   margin-left: 20px;
 }
 .character-info_inverse {
-  margin: 0;
+  margin-right: 20px;
 }
 .nickname,
 .class,
