@@ -1041,7 +1041,7 @@ template {
   border-radius: 5px;
 }
 .progress-bar {
-  transition: width 1s linear;
+  transition: width 0.2s linear;
 }
 .progress-bg_inverse {
   margin: 0 57px 0 0 !important;
