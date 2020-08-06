@@ -1072,14 +1072,29 @@ template {
   display: flex;
   right: 20px;
 }
-.extra-points {
+.new-xp-points {
   color: #41d313;
   font-size: 16px;
   font-family: Linux Libertine, serif;
   font-weight: 800;
   position: absolute;
   top: -11px;
+  animation-duration: 3s;
+  animation-name: animateExpFrames;
 }
 .margin {
   margin-bottom: 80px;
+}
+.hidden {
+  display: none;
+}
+@keyframes animateExpFrames {
+  from {
+    transform: translateY(-10px);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
 }
