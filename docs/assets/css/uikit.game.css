@@ -904,7 +904,6 @@ template {
   left: -777px;
 }
 .progress-bar {
-  overflow: hidden;
   background: #070707;
   width: 0;
   height: 100%;
@@ -970,7 +969,7 @@ template {
   border-radius: 5px;
 }
 .progress-bar {
-  transition: width 1s linear;
+  transition: width 0.2s linear;
 }
 .progress-bg_inverse {
   margin: 0 50px 0 0 !important;
