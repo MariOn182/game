@@ -373,16 +373,89 @@
   left: 0;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
 }
 
 .progress-bar__backlight {
-  display: block;
-  width: 15px;
+  width: 10px;
   background: rgb(219, 219, 219);
   background: linear-gradient(270deg, #dbdbdb 0%, rgba(255, 255, 250, 0.02004552) 75%);
   height: inherit;
-  border-right: 1px solid rgba(255, 255, 255, 0.91);
+  -webkit-animation: pulsing 2s infinite;
+  animation: pulsing 2s infinite;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
 }
+
+.progress-bar__backlight:after{
+  content: "";
+  height: 25px;
+  width: 1px;
+  background: #fff;
+
+}
+
+@-webkit-keyframes pulsing {
+  0% {
+    -webkit-transform: scale(1.0, 1.0);
+    transform: scale(1.0, 1.0)
+  }
+  50% {
+    -webkit-transform: scale(1.5, 1);
+    transform: translate(-3px) scale(1.77, 1);
+  }
+  100% {
+    -webkit-transform: scale(1.0, 1.0);
+    transform: scale(1.0, 1.0);
+  }
+}
+
+@keyframes pulsing {
+  0% {
+    -webkit-transform: scale(1.0, 1.0);
+    transform: scale(1.0, 1.0)
+  }
+  50% {
+    -webkit-transform: scale(1.5, 1);
+    transform: scale(1.5, 1);
+  }
+  100% {
+    -webkit-transform: scale(1.0, 1.0);
+    transform: scale(1.0, 1.0);
+  }
+}
+
+@-webkit-keyframes pulsing2 {
+  0% {
+    -webkit-transform: scale(1.0, 1.0);
+    transform: scale(1.0, 1.0)
+  }
+  50% {
+    -webkit-transform: scale(1, 1.1);
+    transform: scale(1, 1.1);
+  }
+  100% {
+    -webkit-transform: scale(1.0, 1.0);
+    transform: scale(1.0, 1.0);
+  }
+}
+
+@keyframes pulsing2 {
+  0% {
+    -webkit-transform: scale(1.0, 1.0);
+    transform: scale(1.0, 1.0)
+  }
+  50% {
+    -webkit-transform: scale(1, 1.1);
+    transform: scale(1, 1.1);
+  }
+  100% {
+    -webkit-transform: scale(1.0, 1.0);
+    transform: scale(1.0, 1.0);
+  }
+}
+
 
 
 .progress-bar_life {
@@ -445,7 +518,6 @@
 
 .progress-bg {
   position: relative;
-  overflow: hidden;
   background: #070707;
   width: 100%;
   margin: 0 0 0 45px !important;
