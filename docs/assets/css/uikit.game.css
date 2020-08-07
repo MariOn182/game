@@ -619,6 +619,9 @@ template {
   width: 970px;
   padding: 40px 33px 20px 30px;
 }
+.card_spells__wrap {
+  padding-top: 33px;
+}
 .notice {
   width: 130px;
   height: 75px;
