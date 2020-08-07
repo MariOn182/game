@@ -996,25 +996,34 @@ template {
   }
 }
 .progress-bar_life {
-  background: #ff999a;
-  background: -moz-linear-gradient(top, #ff999a 0%, #ff494c 50%, #ff3538 51%, #c90808 100%);
-  background: -webkit-linear-gradient(top, #ff999a 0%, #ff494c 50%, #ff3538 51%, #c90808 100%);
-  background: linear-gradient(to bottom, #ff999a 0%, #ff494c 50%, #ff3538 51%, #c90808 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff999a', endColorstr='#c90808', GradientType=0);
+  background: #d12e2e;
+  background: -moz-linear-gradient(top, #d12e2e 0%, #d12e2e 7%, #f56b6b 20%, #cb2525 51%, #b00c0c 69%, #940000 84%, #750000 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, #d12e2e), color-stop(7%, #d12e2e), color-stop(20%, #f56b6b), color-stop(51%, #cb2525), color-stop(69%, #b00c0c), color-stop(84%, #940000), color-stop(100%, #750000));
+  background: -webkit-linear-gradient(top, #d12e2e 0%, #d12e2e 7%, #f56b6b 20%, #cb2525 51%, #b00c0c 69%, #940000 84%, #750000 100%);
+  background: -o-linear-gradient(top, #d12e2e 0%, #d12e2e 7%, #f56b6b 20%, #cb2525 51%, #b00c0c 69%, #940000 84%, #750000 100%);
+  background: -ms-linear-gradient(top, #d12e2e 0%, #d12e2e 7%, #f56b6b 20%, #cb2525 51%, #b00c0c 69%, #940000 84%, #750000 100%);
+  background: linear-gradient(to bottom, #d12e2e 0%, #d12e2e 7%, #f56b6b 20%, #cb2525 51%, #b00c0c 69%, #940000 84%, #750000 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d12e2e', endColorstr='#750000', GradientType=0);
 }
 .progress-bar_mana {
-  background: #99d6ff;
-  background: -moz-linear-gradient(top, #99d6ff 0%, #335bb2 50%, #2b5fc6 51%, #042870 100%);
-  background: -webkit-linear-gradient(top, #99d6ff 0%, #335bb2 50%, #2b5fc6 51%, #042870 100%);
-  background: linear-gradient(to bottom, #99d6ff 0%, #335bb2 50%, #2b5fc6 51%, #042870 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#99d6ff', endColorstr='#042870', GradientType=0);
+  background: #2c92ba;
+  background: -moz-linear-gradient(top, #2c92ba 0%, #2c92ba 9%, #4badd8 20%, #2487b2 34%, #1379a4 48%, #00567a 82%, #00567a 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, #2c92ba), color-stop(9%, #2c92ba), color-stop(20%, #4badd8), color-stop(34%, #2487b2), color-stop(48%, #1379a4), color-stop(82%, #00567a), color-stop(100%, #00567a));
+  background: -webkit-linear-gradient(top, #2c92ba 0%, #2c92ba 9%, #4badd8 20%, #2487b2 34%, #1379a4 48%, #00567a 82%, #00567a 100%);
+  background: -o-linear-gradient(top, #2c92ba 0%, #2c92ba 9%, #4badd8 20%, #2487b2 34%, #1379a4 48%, #00567a 82%, #00567a 100%);
+  background: -ms-linear-gradient(top, #2c92ba 0%, #2c92ba 9%, #4badd8 20%, #2487b2 34%, #1379a4 48%, #00567a 82%, #00567a 100%);
+  background: linear-gradient(to bottom, #2c92ba 0%, #2c92ba 9%, #4badd8 20%, #2487b2 34%, #1379a4 48%, #00567a 82%, #00567a 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2c92ba', endColorstr='#00567a', GradientType=0);
 }
 .progress-bar_exp {
-  background: #b4e391;
-  background: -moz-linear-gradient(top, #b4e391 0%, #469313 50%, #2d7716 100%);
-  background: -webkit-linear-gradient(top, #b4e391 0%, #469313 50%, #2d7716 100%);
-  background: linear-gradient(to bottom, #b4e391 0%, #469313 50%, #2d7716 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b4e391', endColorstr='#2d7716', GradientType=0);
+  background: #81963c;
+  background: -moz-linear-gradient(top, #81963c 0%, #81963c 10%, #a1b65d 20%, #7b9037 31%, #697e26 49%, #596c14 69%, #3e4d00 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, #81963c), color-stop(10%, #81963c), color-stop(20%, #a1b65d), color-stop(31%, #7b9037), color-stop(49%, #697e26), color-stop(69%, #596c14), color-stop(100%, #3e4d00));
+  background: -webkit-linear-gradient(top, #81963c 0%, #81963c 10%, #a1b65d 20%, #7b9037 31%, #697e26 49%, #596c14 69%, #3e4d00 100%);
+  background: -o-linear-gradient(top, #81963c 0%, #81963c 10%, #a1b65d 20%, #7b9037 31%, #697e26 49%, #596c14 69%, #3e4d00 100%);
+  background: -ms-linear-gradient(top, #81963c 0%, #81963c 10%, #a1b65d 20%, #7b9037 31%, #697e26 49%, #596c14 69%, #3e4d00 100%);
+  background: linear-gradient(to bottom, #81963c 0%, #81963c 10%, #a1b65d 20%, #7b9037 31%, #697e26 49%, #596c14 69%, #3e4d00 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#81963c', endColorstr='#3e4d00', GradientType=0);
 }
 .progress-bar_xp {
   background: #b4e391;
