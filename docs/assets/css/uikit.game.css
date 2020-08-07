@@ -616,7 +616,7 @@ template {
   background: #9dbac3;
 }
 .card_spells {
-  width: 960px;
+  width: 970px;
   padding: 40px 33px 20px 30px;
 }
 .notice {
@@ -1107,13 +1107,18 @@ template {
 .nickname,
 .class,
 .role,
-.progress_xp-num p {
+.progress_xp-num p,
+.progress_xp-num__text {
   margin: 0;
   padding: 0;
   font-size: 22px;
   font-family: Linux Libertine, serif;
   font-weight: 800;
   color: #c2aa97;
+}
+.progress_xp-num__text {
+  font-size: 14px;
+  padding-left: 11px;
 }
 .nickname,
 .class {
@@ -1122,17 +1127,25 @@ template {
 .spells-bar {
   display: grid;
   grid-template-columns: repeat(10, auto);
-  gap: 20px 13px;
+  gap: 15px;
   margin-left: auto;
 }
 .spells-bar__wrap {
-  width: 78px;
-  height: 78px;
+  width: 74px;
+  height: 74px;
   z-index: 2;
   position: absolute;
   background: #323638;
-  top: -4px;
-  left: -4px;
+  top: -6px;
+  left: -6px;
+  background: #7c7f80;
+  background: -moz-linear-gradient(top, #7c7f80 0%, #34383b 3%, #34383b 13%, #34383b 86%, #34383b 98%, #070808 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, #7c7f80), color-stop(3%, #34383b), color-stop(13%, #34383b), color-stop(86%, #34383b), color-stop(98%, #34383b), color-stop(100%, #070808));
+  background: -webkit-linear-gradient(top, #7c7f80 0%, #34383b 3%, #34383b 13%, #34383b 86%, #34383b 98%, #070808 100%);
+  background: -o-linear-gradient(top, #7c7f80 0%, #34383b 3%, #34383b 13%, #34383b 86%, #34383b 98%, #070808 100%);
+  background: -ms-linear-gradient(top, #7c7f80 0%, #34383b 3%, #34383b 13%, #34383b 86%, #34383b 98%, #070808 100%);
+  background: linear-gradient(to bottom, #7c7f80 0%, #34383b 3%, #34383b 13%, #34383b 86%, #34383b 98%, #070808 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7c7f80', endColorstr='#070808', GradientType=0);
 }
 .spells-bar__item {
   width: 70px;
@@ -1143,12 +1156,15 @@ template {
 }
 .spells__icon {
   background: #000000;
-  width: 68px;
-  height: 68px;
+  width: 60px;
+  height: 60px;
   z-index: 3;
   position: absolute;
   border: 1px solid #9f6d37;
   cursor: pointer;
+  -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.52);
+  -moz-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.52);
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.52);
 }
 .spells__number {
   position: absolute;
@@ -1159,7 +1175,7 @@ template {
   width: 27px;
   height: 27px;
   top: -15px;
-  left: 28%;
+  left: 17px;
   font-family: Linux Libertine, serif;
   font-size: 14px;
   color: #c2aa97;
