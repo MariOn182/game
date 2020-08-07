@@ -2,6 +2,8 @@ const life = document.getElementById('life');
 const mana = document.getElementById('mana');
 const exp = document.getElementById('exp');
 let timerId;
+let isInvert=true;
+
 
 const new_xp = document.getElementById('new_xp');
 
@@ -85,4 +87,40 @@ function setXpProgressBar(points, maxPoints, blocksCount) {
     list[i].style.width = `${(points / inOneBlock * 100)}%`;
 
    // затем остаток часть
+}
+function invert() {
+    if (isInvert) {
+        document.getElementById('character').classList.add('character-stats_inverse');
+        document.getElementById('character_info').classList.add('character-info_inverse');
+        document.getElementById('stats').classList.add('stats_inverse');
+        document.getElementById('progress-value1').classList.add('progress-value_inverse');
+        document.getElementById('progress-value2').classList.add('progress-value_inverse');
+        document.getElementById('progress-value3').classList.add('progress-value_inverse');
+
+        document.getElementById('mana').classList.add('progress-bar_inverse');
+        document.getElementById('life').classList.add('progress-bar_inverse');
+        document.getElementById('exp').classList.add('progress-bar_inverse');
+
+        document.getElementById('manaBl').classList.add('progress-bar__backlight_inverse');
+        document.getElementById('lifeBl').classList.add('progress-bar__backlight_inverse');
+        document.getElementById('expBl').classList.add('progress-bar__backlight_inverse');
+        isInvert=!isInvert;
+    }
+    else{
+        document.getElementById('character').classList.remove('character-stats_inverse');
+        document.getElementById('character_info').classList.remove('character-info_inverse');
+        document.getElementById('stats').classList.remove('stats_inverse');
+        document.getElementById('progress-value1').classList.remove('progress-value_inverse');
+        document.getElementById('progress-value2').classList.remove('progress-value_inverse');
+        document.getElementById('progress-value3').classList.remove('progress-value_inverse');
+
+        document.getElementById('mana').classList.remove('progress-bar_inverse');
+        document.getElementById('life').classList.remove('progress-bar_inverse');
+        document.getElementById('exp').classList.remove('progress-bar_inverse');
+
+        document.getElementById('manaBl').classList.remove('progress-bar__backlight_inverse');
+        document.getElementById('lifeBl').classList.remove('progress-bar__backlight_inverse');
+        document.getElementById('expBl').classList.remove('progress-bar__backlight_inverse');
+        isInvert=!isInvert;
+    }
 }

@@ -388,12 +388,16 @@
   flex-direction: row-reverse;
 }
 
-.progress-bar__backlight:after{
+.progress-bar__backlight:after {
   content: "";
   height: 25px;
   width: 1px;
   background: #fff;
+}
 
+.progress-bar__backlight_inverse {
+  flex-direction: row;
+  background: linear-gradient(-270deg, #dbdbdb 0%, rgba(255, 255, 250, 0.02004552) 75%);
 }
 
 @-webkit-keyframes pulsing {
@@ -455,7 +459,6 @@
     transform: scale(1.0, 1.0);
   }
 }
-
 
 
 .progress-bar_life {
@@ -531,6 +534,12 @@
 
 .progress-bar {
   transition: width 0.2s linear;
+}
+
+.progress-bar_inverse {
+  justify-content: flex-start;
+  left: auto;
+  right: 0;
 }
 
 .progress-bg_inverse {

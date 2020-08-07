@@ -924,6 +924,10 @@ template {
   width: 1px;
   background: #fff;
 }
+.progress-bar__backlight_inverse {
+  flex-direction: row;
+  background: linear-gradient(-270deg, #dbdbdb 0%, rgba(255, 255, 250, 0.02004552) 75%);
+}
 @-webkit-keyframes pulsing {
   0% {
     -webkit-transform: scale(1, 1);
@@ -931,7 +935,7 @@ template {
   }
   50% {
     -webkit-transform: scale(1.5, 1);
-    transform: scale(1.5, 1);
+    transform: translate(-3px) scale(1.77, 1);
   }
   100% {
     -webkit-transform: scale(1, 1);
@@ -1031,17 +1035,22 @@ template {
 }
 .progress-bg {
   position: relative;
-  background: #070707;
   width: 100%;
   margin: 0 0 0 45px !important;
   height: 25px;
   display: flex;
+  background: #070707;
   border: 1px solid #493026;
   box-sizing: border-box;
   border-radius: 5px;
 }
 .progress-bar {
   transition: width 0.2s linear;
+}
+.progress-bar_inverse {
+  justify-content: flex-start;
+  left: auto;
+  right: 0;
 }
 .progress-bg_inverse {
   margin: 0 57px 0 0 !important;

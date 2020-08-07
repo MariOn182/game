@@ -246,29 +246,31 @@
         <span class="close"></span>
       </div>
 
-      <div class="character-stats margin">
+<button type="button" onclick="invert()">Инвертировать</button>
+
+      <div id="character" class="character-stats margin">
         <div class="avatar__wrap">
           <span class="avatar"></span>
         </div>
 
-        <div class="character-info">
+        <div id="character_info" class="character-info">
           <p class="nickname">Nickname,</p>
           <p class="class">class,</p>
           <p class="role">role</p>
         </div>
 
-        <div class="stats">
+        <div id="stats" class="stats">
             <div class="progress progress_life">
-                <div class="progress-value">128 / 145</div>
-                <div class="progress-bg"><div id="life" class="progress-bar progress-bar_life"><span class="progress-bar__backlight"></span></div></div>
+                <div id="progress-value1" class="progress-value">128 / 145</div>
+                <div class="progress-bg"><div id="life" class="progress-bar progress-bar_life"><span id="lifeBl" class="progress-bar__backlight"></span></div></div>
             </div>
             <div class="progress progress_mana">
-                <div class="progress-value">128 / 145</div>
-                <div class="progress-bg"><div id="mana" class="progress-bar progress-bar_mana"><span class="progress-bar__backlight"></span></div></div>
+                <div id="progress-value2"class="progress-value">128 / 145</div>
+                <div class="progress-bg"><div id="mana" class="progress-bar progress-bar_mana"><span id="manaBl" class="progress-bar__backlight"></span></div></div>
             </div>
             <div class="progress progress_exp">
-                <div class="progress-value">128 / 145</div>
-                <div class="progress-bg"><div id="exp" class="progress-bar progress-bar_exp"><span class="progress-bar__backlight"></span></div></div>
+                <div id="progress-value3" class="progress-value">128 / 145</div>
+                <div class="progress-bg"><div id="exp" class="progress-bar progress-bar_exp"><span  id="expBl" class="progress-bar__backlight"></span></div></div>
             </div>
           </div>
         </div>
