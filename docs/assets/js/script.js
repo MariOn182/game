@@ -97,7 +97,7 @@ function invert() {
         document.getElementById('progress-value2').classList.add('progress-value_inverse');
         document.getElementById('progress-value3').classList.add('progress-value_inverse');
 
-        document.getElementById('mana').classList.add('progress-bar_inverse');
+        document.getElementById('mana').classList.add('progress-bg_inverse');
         document.getElementById('life').classList.add('progress-bar_inverse');
         document.getElementById('exp').classList.add('progress-bar_inverse');
 
