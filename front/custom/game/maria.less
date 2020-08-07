@@ -15,25 +15,30 @@
   box-sizing: border-box;
 }
 
-.card__default, .card__error, .card__warning, .card__info, .card__success {
+.card_default, .card_error, .card_warning, .card_info, .card_success {
   width: 500px;
 }
 
 
-.card__warning {
+.card_warning {
   background: #e8c07e;
 }
 
-.card__error {
+.card_error {
   background: #c28484;
 }
 
-.card__success {
+.card_success {
   background: #bbcc96;
 }
 
-.card__info {
+.card_info {
   background: #9dbac3;
+}
+
+.card_spells{
+  width: 960px;
+  padding: 40px 33px 20px 30px;
 }
 
 .notice {
@@ -374,7 +379,9 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  border-radius: 5px;
 }
+
 
 .progress-bar__backlight {
   width: 10px;
@@ -526,7 +533,6 @@
   margin: 0 0 0 45px !important;
   height: 25px;
   display: flex;
-  background: #070707;
   border: 1px solid #493026;
   box-sizing: border-box;
   border-radius: 5px;
@@ -607,7 +613,6 @@
   grid-template-columns: repeat(10, auto);
   gap: 20px 13px;
   margin-left: auto;
-  width: 78%;
 }
 
 .spells-bar__wrap {

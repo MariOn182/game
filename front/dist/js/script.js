@@ -104,6 +104,11 @@ function invert() {
         document.getElementById('manaBl').classList.add('progress-bar__backlight_inverse');
         document.getElementById('lifeBl').classList.add('progress-bar__backlight_inverse');
         document.getElementById('expBl').classList.add('progress-bar__backlight_inverse');
+
+
+        document.getElementById('bg1').classList.add('progress-bg_inverse');
+        document.getElementById('bg2').classList.add('progress-bg_inverse');
+        document.getElementById('bg3').classList.add('progress-bg_inverse');
         isInvert=!isInvert;
     }
     else{
@@ -121,6 +126,11 @@ function invert() {
         document.getElementById('manaBl').classList.remove('progress-bar__backlight_inverse');
         document.getElementById('lifeBl').classList.remove('progress-bar__backlight_inverse');
         document.getElementById('expBl').classList.remove('progress-bar__backlight_inverse');
+
+
+        document.getElementById('bg1').classList.remove('progress-bg_inverse');
+        document.getElementById('bg2').classList.remove('progress-bg_inverse');
+        document.getElementById('bg3').classList.remove('progress-bg_inverse');
         isInvert=!isInvert;
     }
 }
