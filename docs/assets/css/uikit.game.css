@@ -777,6 +777,11 @@ template {
 .corner_arrow-bottom-right {
   bottom: -21px;
 }
+.corner_arrow-top-right {
+  left: auto;
+  right: -22px;
+  transform: scale(-1, 1);
+}
 .corner_leaf {
   background: url("../images/leaf.png") no-repeat;
   left: -10px;
@@ -788,6 +793,11 @@ template {
   bottom: -23px;
   right: -13px;
   left: auto;
+}
+.corner_leaf-top-right {
+  left: auto;
+  right: -13px;
+  transform: scale(-1, 1);
 }
 .corner_wood {
   background: url("../images/wood.png") no-repeat;
@@ -804,6 +814,11 @@ template {
   right: -6px;
   bottom: -14px;
 }
+.corner_wood-top-right {
+  left: auto;
+  right: -5px;
+  transform: scale(-1, 1);
+}
 .corner_metal {
   background: url("../images/metal.png") no-repeat;
   left: -50px;
@@ -818,6 +833,11 @@ template {
   top: auto;
   bottom: -22px;
   right: -55px;
+}
+.corner_metal-top-right {
+  left: auto;
+  right: -55px;
+  transform: scale(-1, 1);
 }
 .close {
   background: url("../images/close.png") no-repeat;
