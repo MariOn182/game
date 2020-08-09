@@ -596,10 +596,10 @@ template {
   padding: 5px;
   box-sizing: border-box;
   border: 20px solid transparent;
-  -moz-border-image: url(../../pages/assets/images/border.png) 30 round round;
-  -webkit-border-image: url(../../pages/assets/images/border.png) 30 round round;
-  -o-border-image: url(../../pages/assets/images/border.png) 30 round round;
-  border-image: url(../../pages/assets/images/border.png) 30 round round;
+  -moz-border-image: url(../images/border.png) 30 round round;
+  -webkit-border-image: url(../images/border.png) 30 round round;
+  -o-border-image: url(../images/border.png) 30 round round;
+  border-image: url(../images/border.png) 30 round round;
 }
 .card_default,
 .card_error,
