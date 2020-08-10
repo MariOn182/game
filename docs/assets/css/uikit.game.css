@@ -715,7 +715,7 @@ template {
 .corner_wood {
   background: url("../images/wood.png") no-repeat;
   top: -28px;
-  left: -28px;
+  left: -29px;
 }
 .corner_wood-bottom-left {
   top: auto;
