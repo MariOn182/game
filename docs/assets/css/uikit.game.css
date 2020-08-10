@@ -590,7 +590,6 @@ template {
   min-width: 500px;
   min-height: 130px;
   background: #0e0b09;
-  margin: auto;
   display: flex;
   align-items: center;
   padding: 5px;
