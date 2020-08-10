@@ -620,12 +620,10 @@ template {
 .card_info {
   background: #9dbac3;
 }
-.card_spells {
-  width: 970px;
-  padding: 40px 33px 20px 30px;
-}
 .card_spells__wrap {
   padding-top: 33px;
+  position: relative;
+  width: 970px;
 }
 .notice {
   width: 130px;
@@ -645,7 +643,6 @@ template {
 .notice_error {
   background: url("../images/noticeError.png") no-repeat;
 }
-
 .card__text {
   width: 590px;
 }
@@ -1123,9 +1120,9 @@ template {
 }
 .xp-window {
   position: absolute;
-  top: -33px;
+  top: 0;
   display: flex;
-  right: 20px;
+  right: 13px;
 }
 .new-xp-points {
   color: #41d313;
