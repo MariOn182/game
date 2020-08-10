@@ -809,7 +809,7 @@ template {
   left: 170px;
 }
 .stats_inverse {
-  left: -75px;
+  left: -100px;
   align-items: flex-end;
 }
 .progress {
@@ -981,7 +981,7 @@ template {
   text-shadow: 1px 2px 3px #000;
 }
 .progress-value_inverse {
-  right: 100px;
+  right: 75px;
   left: auto;
 }
 .progress-value_xp {
@@ -1001,7 +1001,7 @@ template {
   border-radius: 5px;
 }
 .progress-bg_inverse {
-  margin: 0 85px 0 0 !important;
+  margin: 0 58px 0 0 !important;
 }
 .progress-bg_xp {
   margin: 0 !important;
@@ -1037,7 +1037,7 @@ template {
   padding-top: 17px;
 }
 .character-info_inverse {
-  margin-right: 20px;
+  margin-right: 19px;
 }
 .nickname,
 .class,
